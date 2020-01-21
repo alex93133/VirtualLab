@@ -9,10 +9,6 @@ class Test: UIViewController {
     @IBOutlet weak var headLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     
-    @IBOutlet weak var firstAnswerButton: UIButton!
-    @IBOutlet weak var secondAnswerButton: UIButton!
-    @IBOutlet weak var thirdAnswerButton: UIButton!
-    
     @IBOutlet weak var firstAnswerLabel: UILabel!
     @IBOutlet weak var secondAnswerLabel: UILabel!
     @IBOutlet weak var thirdAnswerLabel: UILabel!
@@ -102,9 +98,9 @@ class Test: UIViewController {
     
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-         let radioButtonInstance = RadioButtons(firstAnswerButton: firstAnswerButton,
-                                                      secondAnswerButton: secondAnswerButton,
-                                                      thirdAnswerButton: thirdAnswerButton)
+         let radioButtonInstance = RadioButtons(firstAnswerButton: answersButton[0],
+                                                      secondAnswerButton: answersButton[1],
+                                                      thirdAnswerButton: answersButton[2])
                radioButtonInstance.answerButtonPressed(sender)
     }
     
@@ -129,9 +125,9 @@ class Test: UIViewController {
             currentQuestion += 1
             updateQuestion()
         }
-        firstAnswerButton.isSelected  = false
-        secondAnswerButton.isSelected = false
-        thirdAnswerButton.isSelected  = false
+        answersButton[0].isSelected = false
+        answersButton[1].isSelected = false
+        answersButton[2].isSelected = false
         
     }
     

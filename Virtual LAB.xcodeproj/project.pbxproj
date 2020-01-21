@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52F74E8867988CE6C4F79A35 /* Pods_Virtual_LAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB29B9964C24BD31C7693A4F /* Pods_Virtual_LAB.framework */; };
-		A80F8B7E23AFDE5A000C36C3 /* Theory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F8B7D23AFDE5A000C36C3 /* Theory.swift */; };
+		A80F8B7E23AFDE5A000C36C3 /* ChooseTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F8B7D23AFDE5A000C36C3 /* ChooseTheme.swift */; };
 		A8123CD023C9E20100EBC986 /* PrepareForTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8123CCF23C9E20100EBC986 /* PrepareForTest.swift */; };
 		A812CAD723B298B8007D2BBB /* AREducation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A812CAD623B298B8007D2BBB /* AREducation.swift */; };
 		A815B04923C61FC70087CB27 /* CompleteRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A815B04823C61FC70087CB27 /* CompleteRegistration.swift */; };
@@ -29,6 +29,7 @@
 		A890506723AD3412004D8915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A890506523AD3412004D8915 /* LaunchScreen.storyboard */; };
 		A890508B23AD39AF004D8915 /* ChooseMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890508A23AD39AF004D8915 /* ChooseMode.swift */; };
 		A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9283223D732C1002D167F /* RadioButtons.swift */; };
+		A8A9283523D76E50002D167F /* TheoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9283423D76E50002D167F /* TheoryText.swift */; };
 		A8B0414B23C2F4D20082E8BC /* WorkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B0414A23C2F4D20082E8BC /* WorkResult.swift */; };
 		A8C1557923BDBAFC000B8093 /* AdminPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C1557823BDBAFC000B8093 /* AdminPanel.swift */; };
 		A8C62F4F23B6261D0098F892 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */; };
@@ -55,7 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A80F8B7D23AFDE5A000C36C3 /* Theory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theory.swift; sourceTree = "<group>"; };
+		A80F8B7D23AFDE5A000C36C3 /* ChooseTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTheme.swift; sourceTree = "<group>"; };
 		A8123CCF23C9E20100EBC986 /* PrepareForTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareForTest.swift; sourceTree = "<group>"; };
 		A812CAD623B298B8007D2BBB /* AREducation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AREducation.swift; sourceTree = "<group>"; };
 		A815B04823C61FC70087CB27 /* CompleteRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteRegistration.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		A890507823AD3412004D8915 /* Virtual LABUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtual LABUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A890508A23AD39AF004D8915 /* ChooseMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMode.swift; sourceTree = "<group>"; };
 		A8A9283223D732C1002D167F /* RadioButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtons.swift; sourceTree = "<group>"; };
+		A8A9283423D76E50002D167F /* TheoryText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryText.swift; sourceTree = "<group>"; };
 		A8B0414A23C2F4D20082E8BC /* WorkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkResult.swift; sourceTree = "<group>"; };
 		A8C1557823BDBAFC000B8093 /* AdminPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanel.swift; sourceTree = "<group>"; };
 		A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -141,7 +143,7 @@
 				A85BCA8F23AE7E8400DA0449 /* Authorization.swift */,
 				A815B04A23C61FF10087CB27 /* Registration */,
 				A8C1557823BDBAFC000B8093 /* AdminPanel.swift */,
-				A80F8B7D23AFDE5A000C36C3 /* Theory.swift */,
+				A80F8B7D23AFDE5A000C36C3 /* ChooseTheme.swift */,
 				A8204A3E23C89A0900FA70DF /* Test.swift */,
 				A890505C23AD340F004D8915 /* ARDemo.swift */,
 			);
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				A890508A23AD39AF004D8915 /* ChooseMode.swift */,
+				A8A9283423D76E50002D167F /* TheoryText.swift */,
 				A8123CCF23C9E20100EBC986 /* PrepareForTest.swift */,
 				A82AD0B323CD9EFC00507EEC /* TestResult.swift */,
 				A812CAD623B298B8007D2BBB /* AREducation.swift */,
@@ -442,10 +445,11 @@
 				A832E48123C6272C00DD26A3 /* Registration.swift in Sources */,
 				A8E5DF9B23BA5E4C00F67CCC /* User.swift in Sources */,
 				A859F24D23D5907B000D6D01 /* FirebaseErrorsProcessing.swift in Sources */,
+				A8A9283523D76E50002D167F /* TheoryText.swift in Sources */,
 				A8C1557923BDBAFC000B8093 /* AdminPanel.swift in Sources */,
 				A890505B23AD340F004D8915 /* AppDelegate.swift in Sources */,
 				A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */,
-				A80F8B7E23AFDE5A000C36C3 /* Theory.swift in Sources */,
+				A80F8B7E23AFDE5A000C36C3 /* ChooseTheme.swift in Sources */,
 				A890505F23AD340F004D8915 /* Testing.rcproject in Sources */,
 				A8123CD023C9E20100EBC986 /* PrepareForTest.swift in Sources */,
 				A815B04923C61FC70087CB27 /* CompleteRegistration.swift in Sources */,

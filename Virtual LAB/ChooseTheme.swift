@@ -1,11 +1,14 @@
 import UIKit
 import Firebase
 
-class Theory: UIViewController {
+class ChooseTheme: UIViewController {
     
     @IBOutlet weak var headLabel: UILabel!
     
     @IBOutlet var nameOfThemeButtons: [UIButton]!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,6 +16,7 @@ class Theory: UIViewController {
         headLabel.font            = UIFont(name: "Montserrat-ExtraBold", size: 36)
         self.view.backgroundColor = UIColor(named: "BackgroundColor")
         RadioButtons.taggingOfButtons(buttonsArray: nameOfThemeButtons)
+        nextButton.alpha = 0.3
     }
     
     
@@ -20,6 +24,10 @@ class Theory: UIViewController {
     
     
     @IBAction func themeButtonPressed(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2) {
+            self.nextButton.alpha = 1
+        }
+        
         let radioButtonInstance = RadioButtons(firstAnswerButton: nameOfThemeButtons[0],
                                                secondAnswerButton: nameOfThemeButtons[1],
                                                thirdAnswerButton: nameOfThemeButtons[2])
@@ -45,14 +53,14 @@ class Theory: UIViewController {
         }
     }
     
-@IBAction func logout(_ sender: UIBarButtonItem) {
-    do {
-        try Auth.auth().signOut()
-    } catch {
-        print(error.localizedDescription)
+    @IBAction func logout(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print(error.localizedDescription)
+        }
+        dismiss(animated: true, completion: nil)
     }
-    dismiss(animated: true, completion: nil)
-}
-
-
+    
+    
 }
