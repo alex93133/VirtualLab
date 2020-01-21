@@ -28,6 +28,7 @@
 		A890506423AD3412004D8915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A890506323AD3412004D8915 /* Assets.xcassets */; };
 		A890506723AD3412004D8915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A890506523AD3412004D8915 /* LaunchScreen.storyboard */; };
 		A890508B23AD39AF004D8915 /* ChooseMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890508A23AD39AF004D8915 /* ChooseMode.swift */; };
+		A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9283223D732C1002D167F /* RadioButtons.swift */; };
 		A8B0414B23C2F4D20082E8BC /* WorkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B0414A23C2F4D20082E8BC /* WorkResult.swift */; };
 		A8C1557923BDBAFC000B8093 /* AdminPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C1557823BDBAFC000B8093 /* AdminPanel.swift */; };
 		A8C62F4F23B6261D0098F892 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */; };
@@ -78,6 +79,7 @@
 		A890506D23AD3412004D8915 /* Virtual LABTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtual LABTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A890507823AD3412004D8915 /* Virtual LABUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Virtual LABUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A890508A23AD39AF004D8915 /* ChooseMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMode.swift; sourceTree = "<group>"; };
+		A8A9283223D732C1002D167F /* RadioButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtons.swift; sourceTree = "<group>"; };
 		A8B0414A23C2F4D20082E8BC /* WorkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkResult.swift; sourceTree = "<group>"; };
 		A8C1557823BDBAFC000B8093 /* AdminPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanel.swift; sourceTree = "<group>"; };
 		A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -202,6 +204,18 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		A8A9283123D73281002D167F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A890508A23AD39AF004D8915 /* ChooseMode.swift */,
+				A8123CCF23C9E20100EBC986 /* PrepareForTest.swift */,
+				A82AD0B323CD9EFC00507EEC /* TestResult.swift */,
+				A812CAD623B298B8007D2BBB /* AREducation.swift */,
+				A8B0414A23C2F4D20082E8BC /* WorkResult.swift */,
+			);
+			name = Screens;
+			sourceTree = "<group>";
+		};
 		A8E5DF9E23BA5E6600F67CCC /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,11 +231,8 @@
 				A8212F0123AE206E003B9121 /* Main.storyboard */,
 				A890506523AD3412004D8915 /* LaunchScreen.storyboard */,
 				A832E48223C6364F00DD26A3 /* Attributing.swift */,
-				A890508A23AD39AF004D8915 /* ChooseMode.swift */,
-				A8123CCF23C9E20100EBC986 /* PrepareForTest.swift */,
-				A82AD0B323CD9EFC00507EEC /* TestResult.swift */,
-				A812CAD623B298B8007D2BBB /* AREducation.swift */,
-				A8B0414A23C2F4D20082E8BC /* WorkResult.swift */,
+				A8A9283223D732C1002D167F /* RadioButtons.swift */,
+				A8A9283123D73281002D167F /* Screens */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -433,6 +444,7 @@
 				A859F24D23D5907B000D6D01 /* FirebaseErrorsProcessing.swift in Sources */,
 				A8C1557923BDBAFC000B8093 /* AdminPanel.swift in Sources */,
 				A890505B23AD340F004D8915 /* AppDelegate.swift in Sources */,
+				A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */,
 				A80F8B7E23AFDE5A000C36C3 /* Theory.swift in Sources */,
 				A890505F23AD340F004D8915 /* Testing.rcproject in Sources */,
 				A8123CD023C9E20100EBC986 /* PrepareForTest.swift in Sources */,

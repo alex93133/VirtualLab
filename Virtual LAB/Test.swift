@@ -33,7 +33,7 @@ class Test: UIViewController {
         self.view.backgroundColor  = UIColor(named: "BackgroundColor")
         
         updateQuestion()
-        taggingOfButtons(buttonsArray: answersButton)
+        RadioButtons.taggingOfButtons(buttonsArray: answersButton)
         ref = Database.database().reference()
     }
     
@@ -87,28 +87,6 @@ class Test: UIViewController {
         
     }
     
-    
-    func taggingOfButtons (buttonsArray : [UIButton]) {
-        var tagForButton = 1
-        for button in buttonsArray {
-            button.tag = tagForButton
-            tagForButton += 1
-        }
-    }
-    
-    
-    func changeCheckBox (_ sender: UIButton) {
-        UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveLinear, animations: {
-            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        }) { (success) in
-            sender.isSelected = !sender.isSelected
-            UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveLinear, animations: {
-                sender.transform = .identity
-            }, completion: nil)
-        }
-        
-    }
-    
 
     func checkRightAnswer(buttonsArray : [UIButton]) {
         
@@ -123,24 +101,12 @@ class Test: UIViewController {
     //MARK: Actions
     
     
-    
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        changeCheckBox(sender)
-        
-        switch sender.tag {
-        case 1:
-            secondAnswerButton.isSelected = false
-            thirdAnswerButton.isSelected  = false
-        case 2:
-            firstAnswerButton.isSelected = false
-            thirdAnswerButton.isSelected = false
-        case 3:
-            firstAnswerButton.isSelected  = false
-            secondAnswerButton.isSelected = false
-        default: print(sender.tag)
-        }
+         let radioButtonInstance = RadioButtons(firstAnswerButton: firstAnswerButton,
+                                                      secondAnswerButton: secondAnswerButton,
+                                                      thirdAnswerButton: thirdAnswerButton)
+               radioButtonInstance.answerButtonPressed(sender)
     }
-    
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         
