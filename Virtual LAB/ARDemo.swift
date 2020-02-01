@@ -17,11 +17,15 @@ class ARDemo: UIViewController {
         testAnchor.generateCollisionShapes(recursive: true)
         arView.scene.addAnchor(testAnchor)
         
-        arView.debugOptions = .showStatistics
+//        arView.debugOptions = .showStatistics
 
         self.navigationController?.navigationBar.topItem?.title = ""
 
         print("Hello")
+        
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(boxTapped(touch:)))
+        self.arView.addGestureRecognizer(gestureRecognizer)
     }
 
     
@@ -30,7 +34,15 @@ class ARDemo: UIViewController {
 
     //MARK: Actions
     
-
+     @objc func boxTapped(touch: UITapGestureRecognizer) {
+           let sceneView = touch.view as! ARView
+           let touchLocation = touch.location(in: sceneView)
+           
+//        let touchResults = sceneView.hitTest(touchLocation, types: .existingPlaneUsingGeometry)
+//        
+//        print(touchResults)
+           
+       }
     
 
     func sceneLoadAndReload() {

@@ -118,7 +118,7 @@ class Test: UIViewController {
             
             guard let userID = Auth.auth().currentUser?.uid else { return }
             let userInfoRef = self.ref.child("Users").child(userID)
-            userInfoRef.updateChildValues(["Результат теста": resultMessage])
+            userInfoRef.updateChildValues(["test": resultMessage])
             
             performSegue(withIdentifier: "toTestResult", sender: nil)
         default:

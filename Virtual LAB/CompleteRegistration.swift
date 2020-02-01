@@ -69,7 +69,7 @@ class CompleteRegistration: UIViewController {
         guard let userID = Auth.auth().currentUser?.uid else {
             displayWarningLabel(withText: "Пользователь не создан")
             return }
-        let userInfo    = UserData(email: email, firstName: firstName, secondName: secondName, groupNumber: groupNumber)
+        let userInfo    = Users(firstName: firstName, secondName: secondName, email: email, groupNumber: groupNumber, test: "Не выполнен", workDidFinished: false)
         let userInfoRef = self.ref.child("Users").child(userID)
         userInfoRef.setValue(userInfo.convertToDictionary())
         
