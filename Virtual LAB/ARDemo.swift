@@ -36,7 +36,7 @@ class ARDemo: UIViewController {
     
      @objc func boxTapped(touch: UITapGestureRecognizer) {
            let sceneView = touch.view as! ARView
-           let touchLocation = touch.location(in: sceneView)
+        _ = touch.location(in: sceneView)
            
 //        let touchResults = sceneView.hitTest(touchLocation, types: .existingPlaneUsingGeometry)
 //        
