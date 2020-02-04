@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="THQ-TA-opj">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gm5-kE-ePs">
+    <device id="retina5_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -627,7 +627,73 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7K3-yW-Lp9" id="0ds-Oh-ecp">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Овчеренко Павел" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Am0-AC-uGD">
+                                            <rect key="frame" x="15" y="24" width="270" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="69T-0m-rce"/>
+                                                <constraint firstAttribute="width" constant="270" id="YPh-Jr-enH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="JIW-jT-w7j">
+                                            <rect key="frame" x="334.66666666666669" y="20.333333333333332" width="64.333333333333314" height="49.666666666666671"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОНГ-17-2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSR-gX-4Op">
+                                                    <rect key="frame" x="5.0000000000000036" y="0.0" width="59.333333333333343" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тест" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5U-M1-pMZ">
+                                                    <rect key="frame" x="35.666666666666629" y="17.000000000000004" width="28.666666666666671" height="15.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X10-MF-Cui">
+                                                    <rect key="frame" x="0.0" y="34.666666666666671" width="64.333333333333329" height="15"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Работа" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOw-86-b41">
+                                                            <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2f-f0-b09">
+                                                            <rect key="frame" x="49.333333333333314" y="0.0" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="apC-JH-hAr"/>
+                                                                <constraint firstAttribute="width" constant="15" id="b8e-8o-u5Z"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button" image="UnCheckbox"/>
+                                                            <state key="selected" image="Checkbox"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="G5U-M1-pMZ" firstAttribute="centerY" secondItem="JIW-jT-w7j" secondAttribute="centerY" id="Awo-jQ-iRu"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JIW-jT-w7j" firstAttribute="centerY" secondItem="0ds-Oh-ecp" secondAttribute="centerY" id="0k2-fA-sa0"/>
+                                        <constraint firstAttribute="trailing" secondItem="JIW-jT-w7j" secondAttribute="trailing" constant="15" id="BS1-WX-Wyh"/>
+                                        <constraint firstItem="Am0-AC-uGD" firstAttribute="leading" secondItem="0ds-Oh-ecp" secondAttribute="leading" constant="15" id="TOe-dN-ede"/>
+                                        <constraint firstItem="JIW-jT-w7j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Am0-AC-uGD" secondAttribute="trailing" constant="8" symbolic="YES" id="Uid-bj-M4S"/>
+                                        <constraint firstItem="Am0-AC-uGD" firstAttribute="centerY" secondItem="0ds-Oh-ecp" secondAttribute="centerY" id="sGe-tT-Zu1"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <connections>
+                                    <outlet property="groupLabel" destination="MSR-gX-4Op" id="ZK7-rw-h1d"/>
+                                    <outlet property="nameLabel" destination="Am0-AC-uGD" id="WSC-82-r8z"/>
+                                    <outlet property="testLabel" destination="G5U-M1-pMZ" id="5GC-22-68e"/>
+                                    <outlet property="workResultLabel" destination="b2f-f0-b09" id="JNc-1D-ir8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -635,9 +701,7 @@
                             <outlet property="delegate" destination="0pV-mg-4yh" id="avV-Tf-NJh"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="ftH-ab-vYk"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="Np0-4N-VLD">
                         <barButtonItem key="leftBarButtonItem" id="A8j-rN-CsD">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lef-4r-8Rv">
@@ -1509,9 +1573,11 @@
     </scenes>
     <resources>
         <image name="AuthReg" width="193" height="185"/>
+        <image name="Checkbox" width="60" height="60"/>
         <image name="Radio OFF" width="28" height="30"/>
         <image name="Radio ON" width="28" height="30"/>
         <image name="Test" width="193" height="185"/>
+        <image name="UnCheckbox" width="60" height="60"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="logo" width="169" height="169"/>
         <namedColor name="BackgroundColor">

@@ -19,8 +19,8 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewWillAppear(animated)
         self.tableView.alpha = 0
         self.ref = Database.database().reference()
-        self.ref.child("Users").observe(.value, with: {(snapshot) in
-
+        self.ref.child("Users").queryOrdered(byChild: "secondName").observe(.value, with: {(snapshot) in
+            self.users.removeAll()
             for snap in snapshot.children {
                 let userSnap        = snap as! DataSnapshot
                 let userDict        = userSnap.value as? [String:AnyObject]
@@ -39,6 +39,7 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.tableView.reloadData()
                 self.tableView.alpha = 1
             }
+            print(Users.extractionListOfGroup(arrayOfUsers: self.users))
         })
     }
     
@@ -56,8 +57,10 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? CustomTableViewCell
-        cell?.textLabel?.text = self.users[indexPath.row].firstName
-        cell?.backgroundColor = UIColor(named: "BackgroundColor")
+        cell?.nameLabel.text = "\(users[indexPath.row].firstName)\n\(users[indexPath.row].secondName)"
+        cell?.groupLabel.text = users[indexPath.row].groupNumber
+        cell?.testLabel.text = users[indexPath.row].test
+        cell?.workResult(user: users[indexPath.row])
         return cell!
     }
     
@@ -65,13 +68,16 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return 60
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        2
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//
+//    }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "LOL"
-    }
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//
+//    }
+    
+    
+    
     //MARK: Actions
     
     
