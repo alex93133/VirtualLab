@@ -90,6 +90,7 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - SkeletonView (1.8.3)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -97,6 +98,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - IQKeyboardManagerSwift
+  - SkeletonView
 
 SPEC REPOS:
   trunk:
@@ -119,6 +121,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SkeletonView
 
 SPEC CHECKSUMS:
   Firebase: 497158b816d0a86fc31babbd05546fcd7e6083ff
@@ -140,7 +143,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SkeletonView: ce0c2a2e8154c57b32f5b31b65f4cb92ca119861
 
-PODFILE CHECKSUM: 81911a36729faadc522652f66f2b999145bcc56d
+PODFILE CHECKSUM: 28c64325ff2402c83279094fbc6580093161df53
 
 COCOAPODS: 1.8.4

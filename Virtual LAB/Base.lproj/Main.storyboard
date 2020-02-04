@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gm5-kE-ePs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="THQ-TA-opj">
     <device id="retina5_5" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -621,37 +621,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="7K3-yW-Lp9" customClass="CustomTableViewCell" customModule="Virtual_LAB" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="7K3-yW-Lp9" customClass="CustomTableViewCell" customModule="Virtual_LAB" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7K3-yW-Lp9" id="0ds-Oh-ecp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Овчеренко Павел" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Am0-AC-uGD">
-                                            <rect key="frame" x="15" y="24" width="270" height="42"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="42" id="69T-0m-rce"/>
-                                                <constraint firstAttribute="width" constant="270" id="YPh-Jr-enH"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="JIW-jT-w7j">
-                                            <rect key="frame" x="334.66666666666669" y="20.333333333333332" width="64.333333333333314" height="49.666666666666671"/>
+                                            <rect key="frame" x="334.66666666666669" y="25.333333333333332" width="64.333333333333314" height="49.666666666666671"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ОНГ-17-2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSR-gX-4Op">
                                                     <rect key="frame" x="5.0000000000000036" y="0.0" width="59.333333333333343" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тест" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5U-M1-pMZ">
                                                     <rect key="frame" x="35.666666666666629" y="17.000000000000004" width="28.666666666666671" height="15.666666666666668"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="X10-MF-Cui">
                                                     <rect key="frame" x="0.0" y="34.666666666666671" width="64.333333333333329" height="15"/>
@@ -661,41 +663,100 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                                    <integer key="value" value="4"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2f-f0-b09">
                                                             <rect key="frame" x="49.333333333333314" y="0.0" width="15" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15" id="apC-JH-hAr"/>
-                                                                <constraint firstAttribute="width" constant="15" id="b8e-8o-u5Z"/>
+                                                                <constraint firstAttribute="width" secondItem="b2f-f0-b09" secondAttribute="height" multiplier="1:1" id="hF8-gN-2pn"/>
                                                             </constraints>
-                                                            <state key="normal" title="Button" image="UnCheckbox"/>
+                                                            <state key="normal" image="UnCheckbox"/>
                                                             <state key="selected" image="Checkbox"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </button>
                                                     </subviews>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="G5U-M1-pMZ" firstAttribute="centerY" secondItem="JIW-jT-w7j" secondAttribute="centerY" id="Awo-jQ-iRu"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PS7-sH-W7e">
+                                            <rect key="frame" x="15" y="25" width="94" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Овчеренко" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Am0-AC-uGD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="94" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="69T-0m-rce"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Павел" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjx-3s-kCO">
+                                                    <rect key="frame" x="0.0" y="30" width="94" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="QyD-AR-kXE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="JIW-jT-w7j" firstAttribute="centerY" secondItem="0ds-Oh-ecp" secondAttribute="centerY" id="0k2-fA-sa0"/>
+                                        <constraint firstItem="PS7-sH-W7e" firstAttribute="leading" secondItem="0ds-Oh-ecp" secondAttribute="leading" constant="15" id="9bu-IY-cA8"/>
                                         <constraint firstAttribute="trailing" secondItem="JIW-jT-w7j" secondAttribute="trailing" constant="15" id="BS1-WX-Wyh"/>
-                                        <constraint firstItem="Am0-AC-uGD" firstAttribute="leading" secondItem="0ds-Oh-ecp" secondAttribute="leading" constant="15" id="TOe-dN-ede"/>
-                                        <constraint firstItem="JIW-jT-w7j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Am0-AC-uGD" secondAttribute="trailing" constant="8" symbolic="YES" id="Uid-bj-M4S"/>
-                                        <constraint firstItem="Am0-AC-uGD" firstAttribute="centerY" secondItem="0ds-Oh-ecp" secondAttribute="centerY" id="sGe-tT-Zu1"/>
+                                        <constraint firstItem="PS7-sH-W7e" firstAttribute="centerY" secondItem="0ds-Oh-ecp" secondAttribute="centerY" id="gJY-we-vYd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="BackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <outlet property="firstNameLabel" destination="Tjx-3s-kCO" id="C2d-dH-2ZT"/>
                                     <outlet property="groupLabel" destination="MSR-gX-4Op" id="ZK7-rw-h1d"/>
-                                    <outlet property="nameLabel" destination="Am0-AC-uGD" id="WSC-82-r8z"/>
+                                    <outlet property="secondNameLabel" destination="Am0-AC-uGD" id="4dJ-Zl-Phi"/>
                                     <outlet property="testLabel" destination="G5U-M1-pMZ" id="5GC-22-68e"/>
                                     <outlet property="workResultLabel" destination="b2f-f0-b09" id="JNc-1D-ir8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="0pV-mg-4yh" id="D7E-4n-qtk"/>
                             <outlet property="delegate" destination="0pV-mg-4yh" id="avV-Tf-NJh"/>

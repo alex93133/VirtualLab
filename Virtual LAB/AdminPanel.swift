@@ -1,23 +1,35 @@
 import UIKit
 import Firebase
+import SkeletonView
 
 class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
     var ref: DatabaseReference!
-    var users = [Users]()
+    
+    var users = [Users]() {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "BackgroundColor")
+        self.tableView.estimatedRowHeight = 100
+        self.view.isSkeletonable = true
+        self.view.showAnimatedGradientSkeleton()
         
     }
     
     //MARK: Read Data
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.alpha = 0
+
+       
+        
         self.ref = Database.database().reference()
         self.ref.child("Users").queryOrdered(byChild: "secondName").observe(.value, with: {(snapshot) in
             self.users.removeAll()
@@ -33,20 +45,17 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 let user            = Users(firstName: firstName, secondName: secondName, email: email, groupNumber: groupNumber, test: test, workDidFinished: workDidFinished)
                 
                 self.users.append(user)
+                self.view.hideSkeleton()
             }
-            
-            UIView.animate(withDuration: 0.2) {
-                self.tableView.reloadData()
-                self.tableView.alpha = 1
-            }
-            print(Users.extractionListOfGroup(arrayOfUsers: self.users))
+
         })
     }
     
+    
     override func viewWillDisappear(_ animated: Bool) {
-           super.viewWillDisappear(animated)
-           self.ref.removeAllObservers()
-       }
+        super.viewWillDisappear(animated)
+        self.ref.removeAllObservers()
+    }
     
     
     //MARK: Table View Data Source
@@ -57,7 +66,8 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? CustomTableViewCell
-        cell?.nameLabel.text = "\(users[indexPath.row].firstName)\n\(users[indexPath.row].secondName)"
+        cell?.firstNameLabel.text = users[indexPath.row].firstName
+        cell?.secondNameLabel.text = users[indexPath.row].secondName
         cell?.groupLabel.text = users[indexPath.row].groupNumber
         cell?.testLabel.text = users[indexPath.row].test
         cell?.workResult(user: users[indexPath.row])
@@ -68,13 +78,11 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return 60
     }
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//
-//    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//
-//    }
+    
     
     
     
@@ -94,7 +102,13 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 }
 
-
+extension AdminPanel: SkeletonTableViewDataSource {
+    
+    public func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "Cell"
+    }
+    
+}
 
 
 
