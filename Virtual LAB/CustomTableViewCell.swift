@@ -8,6 +8,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var workResultLabel: UIButton!
     
+    
     func workResult (user: Users) {
         if user.workDidFinished {
             workResultLabel.isSelected = true

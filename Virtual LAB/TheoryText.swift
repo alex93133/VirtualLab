@@ -34,7 +34,7 @@ class TheoryText: UIViewController {
     attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:attributedStringParagraphStyleOne, range:NSMakeRange(2696,451))
     attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:attributedStringParagraphStyleTwo, range:NSMakeRange(3147,1070))
     attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value:UIColor(red:0.0, green:0.0, blue:0.0, alpha:1.0), range:NSMakeRange(0,4217))
-    attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value:UIColor(red:1.0, green:1.0, blue:1.0, alpha:1.0), range:NSMakeRange(0,4217))
+        attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value:UIColor(named: "BackgroundColor")!, range:NSMakeRange(0,4217))
 
     theoryTextLabel.attributedText = attributedString
     theoryTextLabel.backgroundColor = .clear

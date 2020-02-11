@@ -412,6 +412,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		A81AF83223F2778000B8427F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BB29B9964C24BD31C7693A4F /* Pods_Virtual_LAB.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		A889D58623BA28DE00E164B3 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +440,7 @@
 				A890505823AD340F004D8915 /* Products */,
 				32ED854C5AFCC456DB8DD792 /* Pods */,
 				BE01E5ACB02B7B7F2DE349C4 /* Frameworks */,
+				A81AF83223F2778000B8427F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
