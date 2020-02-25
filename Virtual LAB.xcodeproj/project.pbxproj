@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FFAD86840E98A7C17C50C0F /* Pods_Virtual_LAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D8D8C04968C895F391610E3 /* Pods_Virtual_LAB.framework */; };
 		A80F8B7E23AFDE5A000C36C3 /* ChooseTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F8B7D23AFDE5A000C36C3 /* ChooseTheme.swift */; };
 		A810DB1323E5312700F1E109 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A810DB1223E5312600F1E109 /* CustomTableViewCell.swift */; };
 		A8123CD023C9E20100EBC986 /* PrepareForTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8123CCF23C9E20100EBC986 /* PrepareForTest.swift */; };
@@ -19,8 +18,12 @@
 		A82AD0B423CD9EFC00507EEC /* TestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82AD0B323CD9EFC00507EEC /* TestResult.swift */; };
 		A832E48123C6272C00DD26A3 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E48023C6272C00DD26A3 /* Registration.swift */; };
 		A832E48323C6364F00DD26A3 /* Attributing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E48223C6364F00DD26A3 /* Attributing.swift */; };
+		A84906902401714D000D14EB /* SetupView Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A849068F2401714D000D14EB /* SetupView Authorization.swift */; };
+		A8490692240176C5000D14EB /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8490691240176C5000D14EB /* Routing.swift */; };
+		A84906942401792A000D14EB /* Firebase actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84906932401792A000D14EB /* Firebase actions.swift */; };
+		A84906982401CC39000D14EB /* SetupView Choose Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84906972401CC39000D14EB /* SetupView Choose Mode.swift */; };
 		A859F24D23D5907B000D6D01 /* FirebaseErrorsProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859F24C23D5907B000D6D01 /* FirebaseErrorsProcessing.swift */; };
-		A85BCA9023AE7E8400DA0449 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85BCA8F23AE7E8400DA0449 /* Authorization.swift */; };
+		A85BCA9023AE7E8400DA0449 /* AuthorizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85BCA8F23AE7E8400DA0449 /* AuthorizationVC.swift */; };
 		A86B15CB23BA34530075E19A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A86B15CA23BA34530075E19A /* GoogleService-Info.plist */; };
 		A874FF9223C712DA00F66D6C /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A874FF9123C712DA00F66D6C /* SF-Pro-Display-Regular.otf */; };
 		A890505B23AD340F004D8915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890505A23AD340F004D8915 /* AppDelegate.swift */; };
@@ -28,8 +31,7 @@
 		A890505F23AD340F004D8915 /* Testing.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A890505E23AD340F004D8915 /* Testing.rcproject */; };
 		A890506423AD3412004D8915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A890506323AD3412004D8915 /* Assets.xcassets */; };
 		A890506723AD3412004D8915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A890506523AD3412004D8915 /* LaunchScreen.storyboard */; };
-		A890508B23AD39AF004D8915 /* ChooseMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890508A23AD39AF004D8915 /* ChooseMode.swift */; };
-		A89E938E23E718B500D6739D /* Pods_Virtual_LAB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB29B9964C24BD31C7693A4F /* Pods_Virtual_LAB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A890508B23AD39AF004D8915 /* ChooseModeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A890508A23AD39AF004D8915 /* ChooseModeVC.swift */; };
 		A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9283223D732C1002D167F /* RadioButtons.swift */; };
 		A8A9283523D76E50002D167F /* TheoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9283423D76E50002D167F /* TheoryText.swift */; };
 		A8B0414B23C2F4D20082E8BC /* WorkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B0414A23C2F4D20082E8BC /* WorkResult.swift */; };
@@ -39,20 +41,6 @@
 		A8E5DF9B23BA5E4C00F67CCC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5DF9A23BA5E4C00F67CCC /* User.swift */; };
 		A8F1E60123D48B18004FCC41 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A8F1E60023D48B18004FCC41 /* .gitignore */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A89E938F23E718B500D6739D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A89E938E23E718B500D6739D /* Pods_Virtual_LAB.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4D8D8C04968C895F391610E3 /* Pods_Virtual_LAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Virtual_LAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,8 +55,12 @@
 		A82AD0B323CD9EFC00507EEC /* TestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResult.swift; sourceTree = "<group>"; };
 		A832E48023C6272C00DD26A3 /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		A832E48223C6364F00DD26A3 /* Attributing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributing.swift; sourceTree = "<group>"; };
+		A849068F2401714D000D14EB /* SetupView Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupView Authorization.swift"; sourceTree = "<group>"; };
+		A8490691240176C5000D14EB /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
+		A84906932401792A000D14EB /* Firebase actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase actions.swift"; sourceTree = "<group>"; };
+		A84906972401CC39000D14EB /* SetupView Choose Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SetupView Choose Mode.swift"; sourceTree = "<group>"; };
 		A859F24C23D5907B000D6D01 /* FirebaseErrorsProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseErrorsProcessing.swift; sourceTree = "<group>"; };
-		A85BCA8F23AE7E8400DA0449 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		A85BCA8F23AE7E8400DA0449 /* AuthorizationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationVC.swift; sourceTree = "<group>"; };
 		A869058223E5D5670051D148 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A869058523E5D58F0051D148 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86B15CA23BA34530075E19A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -80,7 +72,7 @@
 		A890506323AD3412004D8915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A890506623AD3412004D8915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A890506823AD3412004D8915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A890508A23AD39AF004D8915 /* ChooseMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMode.swift; sourceTree = "<group>"; };
+		A890508A23AD39AF004D8915 /* ChooseModeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseModeVC.swift; sourceTree = "<group>"; };
 		A8A9283223D732C1002D167F /* RadioButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtons.swift; sourceTree = "<group>"; };
 		A8A9283423D76E50002D167F /* TheoryText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryText.swift; sourceTree = "<group>"; };
 		A8B0414A23C2F4D20082E8BC /* WorkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkResult.swift; sourceTree = "<group>"; };
@@ -99,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FFAD86840E98A7C17C50C0F /* Pods_Virtual_LAB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +126,7 @@
 		A810DAEC23E326E400F1E109 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A890508A23AD39AF004D8915 /* ChooseMode.swift */,
+				A84906972401CC39000D14EB /* SetupView Choose Mode.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -143,6 +134,7 @@
 		A810DAED23E326EB00F1E109 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A890508A23AD39AF004D8915 /* ChooseModeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -150,9 +142,7 @@
 		A810DAEE23E327AC00F1E109 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				A8E5DF9E23BA5E6600F67CCC /* Model */,
 				A8E5DF9F23BA5E8100F67CCC /* Views */,
-				A810DB1123E32BD200F1E109 /* Controller */,
 				A889D58623BA28DE00E164B3 /* Supporting files */,
 			);
 			name = Application;
@@ -171,7 +161,9 @@
 		A810DAF023E3283B00F1E109 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A85BCA8F23AE7E8400DA0449 /* Authorization.swift */,
+				A85BCA8F23AE7E8400DA0449 /* AuthorizationVC.swift */,
+				A84906932401792A000D14EB /* Firebase actions.swift */,
+				A8490691240176C5000D14EB /* Routing.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -179,6 +171,7 @@
 		A810DAF123E3285E00F1E109 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A849068F2401714D000D14EB /* SetupView Authorization.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -186,6 +179,7 @@
 		A810DAF223E3286600F1E109 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A859F24C23D5907B000D6D01 /* FirebaseErrorsProcessing.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -405,13 +399,6 @@
 			name = Unit;
 			sourceTree = "<group>";
 		};
-		A810DB1123E32BD200F1E109 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		A81AF83223F2778000B8427F /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,14 +459,6 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		A8E5DF9E23BA5E6600F67CCC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A859F24C23D5907B000D6D01 /* FirebaseErrorsProcessing.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		A8E5DF9F23BA5E8100F67CCC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,7 +491,6 @@
 				A890505323AD340F004D8915 /* Sources */,
 				A890505423AD340F004D8915 /* Frameworks */,
 				A890505523AD340F004D8915 /* Resources */,
-				A89E938F23E718B500D6739D /* Embed Frameworks */,
 				3D8309C4842FC2B17BA6D138 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -629,9 +607,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A890505D23AD340F004D8915 /* ARDemo.swift in Sources */,
-				A890508B23AD39AF004D8915 /* ChooseMode.swift in Sources */,
+				A890508B23AD39AF004D8915 /* ChooseModeVC.swift in Sources */,
+				A84906902401714D000D14EB /* SetupView Authorization.swift in Sources */,
 				A82AD0B423CD9EFC00507EEC /* TestResult.swift in Sources */,
-				A85BCA9023AE7E8400DA0449 /* Authorization.swift in Sources */,
+				A85BCA9023AE7E8400DA0449 /* AuthorizationVC.swift in Sources */,
+				A84906942401792A000D14EB /* Firebase actions.swift in Sources */,
 				A832E48323C6364F00DD26A3 /* Attributing.swift in Sources */,
 				A812CAD723B298B8007D2BBB /* AREducation.swift in Sources */,
 				A810DB1323E5312700F1E109 /* CustomTableViewCell.swift in Sources */,
@@ -642,7 +622,9 @@
 				A859F24D23D5907B000D6D01 /* FirebaseErrorsProcessing.swift in Sources */,
 				A8A9283523D76E50002D167F /* TheoryText.swift in Sources */,
 				A8C1557923BDBAFC000B8093 /* AdminPanel.swift in Sources */,
+				A84906982401CC39000D14EB /* SetupView Choose Mode.swift in Sources */,
 				A890505B23AD340F004D8915 /* AppDelegate.swift in Sources */,
+				A8490692240176C5000D14EB /* Routing.swift in Sources */,
 				A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */,
 				A80F8B7E23AFDE5A000C36C3 /* ChooseTheme.swift in Sources */,
 				A890505F23AD340F004D8915 /* Testing.rcproject in Sources */,
@@ -801,7 +783,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "AlexandrLazarev.Virtual-LAB";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.spmi.virtuallab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -822,7 +804,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "AlexandrLazarev.Virtual-LAB";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.spmi.virtuallab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
