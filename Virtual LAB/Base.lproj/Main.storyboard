@@ -77,7 +77,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="DNM-eF-0n9" kind="show" id="4U5-1G-kqe"/>
+                                            <segue destination="HC6-Ov-DAI" kind="presentation" modalPresentationStyle="fullScreen" id="4U5-1G-kqe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbS-vQ-JZl">
@@ -455,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSE-2Q-fD3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1122.4000000000001" y="1543.1784107946028"/>
+            <point key="canvasLocation" x="-1122" y="1251"/>
         </scene>
         <!--Complete Registration-->
         <scene sceneID="rR3-hl-60o">
@@ -610,7 +610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V5Y-tB-guL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-15" y="1543"/>
+            <point key="canvasLocation" x="-14" y="1251"/>
         </scene>
         <!--Сортировка-->
         <scene sceneID="vWN-68-g4K">
@@ -821,7 +821,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="892-2X-vi7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1996" y="-364"/>
+            <point key="canvasLocation" x="2902.898550724638" y="-364.4021739130435"/>
         </scene>
         <!--Choose Theme-->
         <scene sceneID="a6b-Xk-zzq">
@@ -1456,7 +1456,7 @@
                                     <constraint firstAttribute="height" constant="48" id="mYd-wo-Gyd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Перейти к обучению в AR">
+                                <state key="normal" title="Перейти к выполнению работы">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1465,9 +1465,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextButtonPressed:" destination="fh6-Fv-dqs" eventType="touchUpInside" id="Ggc-ZN-0mE"/>
                                     <action selector="nextButtonPressed:" destination="qPf-3J-pHu" eventType="touchUpInside" id="Hdq-oj-u9w"/>
                                     <action selector="registerButton:" destination="hCZ-qd-u22" eventType="touchUpInside" id="ye5-98-ape"/>
-                                    <segue destination="tkE-6Z-ysv" kind="presentation" identifier="toAREducation" modalPresentationStyle="fullScreen" id="7wm-z8-N4w"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1495,62 +1495,12 @@
                         <outlet property="headLabel" destination="TIU-DE-mFa" id="gNS-UJ-uB6"/>
                         <outlet property="numberOfRightAnswersLabel" destination="yot-iP-QBR" id="6E7-6r-DWu"/>
                         <outlet property="textRightAnswersLabel" destination="RLA-pm-hmj" id="7De-cf-h98"/>
+                        <segue destination="HC6-Ov-DAI" kind="presentation" identifier="fromTestResultToARDemo" modalPresentationStyle="fullScreen" id="KeI-ht-Q1T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gq-hL-dfw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5745" y="479"/>
-        </scene>
-        <!--Education-->
-        <scene sceneID="Dta-cr-ahb">
-            <objects>
-                <viewController id="tkE-6Z-ysv" customClass="AREducation" customModule="Virtual_LAB" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UEj-8N-r38">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обучение AR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygx-1C-H8B">
-                                <rect key="frame" x="91.666666666666686" y="20" width="231" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" name="BackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ygx-1C-H8B" firstAttribute="centerX" secondItem="bye-TU-V0M" secondAttribute="centerX" id="8Zl-VN-NKW"/>
-                            <constraint firstItem="ygx-1C-H8B" firstAttribute="top" secondItem="bye-TU-V0M" secondAttribute="top" constant="20" id="NRB-QM-cYV"/>
-                            <constraint firstItem="ygx-1C-H8B" firstAttribute="centerX" secondItem="UEj-8N-r38" secondAttribute="centerX" id="UD3-eA-ahs"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="bye-TU-V0M"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BGN-l7-s1k"/>
-                    <connections>
-                        <segue destination="Ugk-cS-96y" kind="show" identifier="fromEducationToARLabWork" id="g7t-lt-J1j"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jj4-RX-68F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6529" y="480"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5aP-Nc-Te0">
-            <objects>
-                <viewController id="Ugk-cS-96y" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vs1-1X-5Z4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="25H-bm-rP5"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BgI-yt-uvC"/>
-                    <connections>
-                        <segue destination="eE8-tg-vxb" kind="presentation" identifier="fromARLabWorkToWorkResult" modalPresentationStyle="fullScreen" id="L9P-n2-ElF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1br-Eo-3vK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7552" y="480"/>
         </scene>
         <!--Work Result-->
         <scene sceneID="rxC-Kn-zHm">
@@ -1561,7 +1511,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результаты" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ile-Kt-bPP">
-                                <rect key="frame" x="105.66666666666669" y="64" width="203" height="43"/>
+                                <rect key="frame" x="105.66666666666669" y="20" width="203" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1579,7 +1529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Se-5G-rsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9244.927536231884" y="-889.4021739130435"/>
+            <point key="canvasLocation" x="3942.0289855072465" y="-889.4021739130435"/>
         </scene>
         <!--Demo-->
         <scene sceneID="BQa-d5-H6M">
@@ -1592,31 +1542,40 @@
                             <arView multipleTouchEnabled="YES" contentMode="scaleToFill" enableRayTracedShadows="YES" translatesAutoresizingMaskIntoConstraints="NO" id="04X-xg-Mit">
                                 <rect key="frame" x="0.0" y="44" width="414" height="692"/>
                             </arView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-eU-Mqg">
-                                <rect key="frame" x="185" y="69" width="44" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfM-VI-9rH">
+                                <rect key="frame" x="37" y="656" width="340" height="48"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.79215686269999996" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="9CU-vG-zXc"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="vCd-zN-pKh"/>
+                                    <constraint firstAttribute="height" constant="48" id="kzT-jH-Cgp"/>
                                 </constraints>
-                                <state key="normal" title="Start"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Запустить демо">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="start:" destination="DNM-eF-0n9" eventType="touchUpInside" id="Mhk-Tr-5qX"/>
+                                    <action selector="start:" destination="DNM-eF-0n9" eventType="touchUpInside" id="6gY-Km-Vjb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="04X-xg-Mit" firstAttribute="bottom" secondItem="TRM-kA-lWi" secondAttribute="bottom" id="2Gd-xb-oE6"/>
-                            <constraint firstItem="yT8-eU-Mqg" firstAttribute="top" secondItem="TRM-kA-lWi" secondAttribute="top" constant="25" id="SkV-bB-tGY"/>
+                            <constraint firstItem="TRM-kA-lWi" firstAttribute="bottom" secondItem="hfM-VI-9rH" secondAttribute="bottom" constant="32" id="NtM-v3-J3F"/>
+                            <constraint firstItem="hfM-VI-9rH" firstAttribute="leading" secondItem="TRM-kA-lWi" secondAttribute="leading" constant="37" id="TBD-xJ-4Xd"/>
                             <constraint firstItem="04X-xg-Mit" firstAttribute="leading" secondItem="TRM-kA-lWi" secondAttribute="leading" id="Tml-Qq-ZX2"/>
-                            <constraint firstItem="yT8-eU-Mqg" firstAttribute="centerX" secondItem="04X-xg-Mit" secondAttribute="centerX" id="bnS-XK-kLS"/>
+                            <constraint firstItem="TRM-kA-lWi" firstAttribute="trailing" secondItem="hfM-VI-9rH" secondAttribute="trailing" constant="37" id="XBr-Me-Su5"/>
                             <constraint firstItem="04X-xg-Mit" firstAttribute="top" secondItem="TRM-kA-lWi" secondAttribute="top" id="kvM-19-vqI"/>
                             <constraint firstItem="04X-xg-Mit" firstAttribute="trailing" secondItem="TRM-kA-lWi" secondAttribute="trailing" id="mDw-Gb-4Bq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TRM-kA-lWi"/>
                     </view>
                     <navigationItem key="navigationItem" id="o4m-E3-v5m">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="KuP-mq-4Pw">
+                        <barButtonItem key="rightBarButtonItem" image="gobackward" catalog="system" id="KuP-mq-4Pw">
                             <connections>
                                 <action selector="reloadButtonPressed:" destination="DNM-eF-0n9" id="Jqf-xe-qYE"/>
                             </connections>
@@ -1624,12 +1583,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="arView" destination="04X-xg-Mit" id="pcA-Tl-ZHJ"/>
-                        <segue destination="eE8-tg-vxb" kind="show" identifier="fromARDemoToWorkResult" id="RYk-Ar-iUf"/>
+                        <outlet property="startButton" destination="hfM-VI-9rH" id="GQV-qJ-o5g"/>
+                        <segue destination="eE8-tg-vxb" kind="presentation" identifier="fromARDemoToWorkResult" modalPresentationStyle="fullScreen" id="RYk-Ar-iUf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smd-T3-mhd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-14" y="-888"/>
+            <point key="canvasLocation" x="1039" y="-889"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cqH-NJ-FTI">
@@ -1647,7 +1607,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jj-6l-5Yj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="-364"/>
+            <point key="canvasLocation" x="1944.9275362318842" y="-364.4021739130435"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5vh-Ho-PQF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HC6-Ov-DAI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="n6d-Fz-OzL"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GoT-wA-fcm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DNM-eF-0n9" kind="relationship" relationship="rootViewController" id="jTk-mW-A4x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cc-hJ-erg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14.492753623188406" y="-888.58695652173924"/>
         </scene>
     </scenes>
     <resources>
@@ -1659,6 +1638,7 @@
         <image name="Test" width="193" height="185"/>
         <image name="UnCheckbox" width="60" height="60"/>
         <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
+        <image name="gobackward" catalog="system" width="60" height="64"/>
         <image name="logo" width="169" height="169"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1677,7 +1657,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RYk-Ar-iUf"/>
+        <segue reference="4U5-1G-kqe"/>
         <segue reference="osA-g6-dZL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,5 +1,6 @@
 import UIKit
 import RealityKit
+import Firebase
 
 
 
@@ -7,64 +8,73 @@ class ARDemo: UIViewController {
     
     
     @IBOutlet weak var arView: ARView!
+    @IBOutlet weak var startButton: UIButton!
     
-    var testAnchor:Testing.Box!
-
+    
+    var anchor: Coloumn.Scene1!
+    var ref: DatabaseReference!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testAnchor = try! Testing.loadBox()
-        testAnchor.generateCollisionShapes(recursive: true)
-        arView.scene.addAnchor(testAnchor)
+        ref = Database.database().reference()
         
-//        arView.debugOptions = .showStatistics
-
+        loadScene()
+        anchor.actions.workDidFinished.onAction = handleTapOnEntity(_:)
+        
         self.navigationController?.navigationBar.topItem?.title = ""
-
-        print("Hello")
-        
-        
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(boxTapped(touch:)))
-        self.arView.addGestureRecognizer(gestureRecognizer)
     }
-
     
-
     
-
     //MARK: Actions
     
-     @objc func boxTapped(touch: UITapGestureRecognizer) {
-           let sceneView = touch.view as! ARView
-        _ = touch.location(in: sceneView)
-           
-//        let touchResults = sceneView.hitTest(touchLocation, types: .existingPlaneUsingGeometry)
-//        
-//        print(touchResults)
-           
-       }
-    
-
-    func sceneLoadAndReload() {
-        arView.scene.removeAnchor(testAnchor)
-        testAnchor = try! Testing.loadBox()
-        testAnchor.generateCollisionShapes(recursive: true)
-        arView.scene.addAnchor(testAnchor)
+    func loadScene() {
+        anchor = try! Coloumn.loadScene1()
+        anchor.generateCollisionShapes(recursive: true)
+        arView.scene.addAnchor(anchor)
+     
     }
     
+    
+    func reloadScene() {
+        arView.scene.removeAnchor(anchor)
+        loadScene()
+        startButton.isHidden = false
+        }
+    
+    
+    func updateDataBase() {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let userInfoRef = self.ref.child("Users").child(userID)
+        userInfoRef.updateChildValues(["workDidFinished": true])
+    }
+    
+    
+    func finishWork() {
+        updateDataBase()
+        startButton.titleLabel?.text = "Завершить"
+        startButton.isHidden = false
+        print("Hello")
+    }
+    
+    
+    func handleTapOnEntity(_ entity: Entity?) {
+        guard entity != nil else { return }
+        finishWork()
+    }
     
     @IBAction func start(_ sender: UIButton) {
-        
-        
-        // Этот метод выполняет действие из композера по имени startProject
-        
-        testAnchor.notifications.startProject.post()
+        anchor.notifications.startScene.post()
+        startButton.isHidden = true
+        if startButton.titleLabel?.text == "Завершить" {
+            performSegue(withIdentifier: "fromARDemoToWorkResult", sender: nil)
+        }
     }
-
     
     
     @IBAction func reloadButtonPressed(_ sender: UIBarButtonItem) {
-      sceneLoadAndReload()
+        reloadScene()
     }
     
 }

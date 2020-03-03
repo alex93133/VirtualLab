@@ -23,5 +23,22 @@ class TestResult: UIViewController {
 
     
    var message: String!
+   
     
+    func rouiting() {
+        performSegue(withIdentifier: "fromTestResultToARDemo", sender: nil)
+    }
+    
+    
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        let allertMessage = "Лабораторная работа находится в раработке, предлагаем Вам пройти её демо версию"
+        let alert = UIAlertController(title: "Внимание!", message: allertMessage, preferredStyle: .alert)
+        let closeAlert = UIAlertAction(title: "Вперед!", style: .default) { (closeAlert) in
+            self.rouiting()
+        }
+        
+        alert.addAction(closeAlert)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
 }

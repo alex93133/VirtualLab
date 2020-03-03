@@ -1,0 +1,32 @@
+[
+  {
+    "libraryIdentifier" : "62cb708576f0bf98ea5fa2836fee7bf2",
+    "format" : "model",
+    "displayName" : "тарелка.usdz"
+  },
+  {
+    "libraryIdentifier" : "2124747e460438a5f3b7425bd8aaf6f3",
+    "format" : "model",
+    "displayName" : "корпус разрезанный.usdz"
+  },
+  {
+    "libraryIdentifier" : "1e46f8bb12331d47171fa18cd4162a61",
+    "format" : "model",
+    "displayName" : "корпус разрезанный+все тарелки.usdz"
+  },
+  {
+    "libraryIdentifier" : "ac432ca02b5474948bec9372412ae038",
+    "format" : "model",
+    "displayName" : "крышка разрезанная.usdz"
+  },
+  {
+    "libraryIdentifier" : "1ab135e34e376d24be08651cb1a29e1f",
+    "format" : "model",
+    "displayName" : "крышка цельная.usdz"
+  },
+  {
+    "libraryIdentifier" : "a98382db195818d652f24f0728887523",
+    "format" : "model",
+    "displayName" : "коолонна маленькая разрез.usdz"
+  }
+]
