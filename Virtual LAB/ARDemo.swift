@@ -8,7 +8,7 @@ class ARDemo: UIViewController {
     
     
     @IBOutlet weak var arView: ARView!
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var endButton: UIButton!
     
     
     var anchor: Coloumn.Scene1!
@@ -21,9 +21,16 @@ class ARDemo: UIViewController {
         ref = Database.database().reference()
         
         loadScene()
-        anchor.actions.workDidFinished.onAction = handleTapOnEntity(_:)
+        
+        anchor.actions.workDidFinished.onAction = closeScene(_:)
+        anchor.actions.sceneStarted.onAction    = setupPlate(_:)
+        anchor.actions.changeTitle.onAction     = setupTop(_:)
+        
         
         self.navigationController?.navigationBar.topItem?.title = ""
+         self.navigationItem.title = "Перемещайте устройство"
+        
+        endButton.isHidden = true
     }
     
     
@@ -33,14 +40,12 @@ class ARDemo: UIViewController {
         anchor = try! Coloumn.loadScene1()
         anchor.generateCollisionShapes(recursive: true)
         arView.scene.addAnchor(anchor)
-     
     }
     
     
     func reloadScene() {
         arView.scene.removeAnchor(anchor)
-        loadScene()
-        startButton.isHidden = false
+//        loadScene()
         }
     
     
@@ -53,23 +58,26 @@ class ARDemo: UIViewController {
     
     func finishWork() {
         updateDataBase()
-        startButton.titleLabel?.text = "Завершить"
-        startButton.isHidden = false
-        print("Hello")
+        endButton.setTitle("Завершить", for: .normal)
+        endButton.isHidden = false
+         self.navigationItem.title = "Нажмите \"Завершить\""
     }
     
+    func setupPlate(_ entity: Entity?) {
+              self.navigationItem.title = "Установите тарелки"
+    }
     
-    func handleTapOnEntity(_ entity: Entity?) {
+    func setupTop(_ entity: Entity?) {
+                self.navigationItem.title = "Установите крышку"
+    }
+    
+    func closeScene(_ entity: Entity?) {
         guard entity != nil else { return }
         finishWork()
     }
     
-    @IBAction func start(_ sender: UIButton) {
-        anchor.notifications.startScene.post()
-        startButton.isHidden = true
-        if startButton.titleLabel?.text == "Завершить" {
-            performSegue(withIdentifier: "fromARDemoToWorkResult", sender: nil)
-        }
+    @IBAction func endScene(_ sender: UIButton) {
+        performSegue(withIdentifier: "return", sender: nil)
     }
     
     

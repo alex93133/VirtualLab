@@ -25,14 +25,13 @@
 		A890506423AD3412004D8915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A890506323AD3412004D8915 /* Assets.xcassets */; };
 		A890506723AD3412004D8915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A890506523AD3412004D8915 /* LaunchScreen.storyboard */; };
 		A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9283223D732C1002D167F /* RadioButtons.swift */; };
-		A8A9283523D76E50002D167F /* TheoryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9283423D76E50002D167F /* TheoryText.swift */; };
-		A8B0414B23C2F4D20082E8BC /* WorkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B0414A23C2F4D20082E8BC /* WorkResult.swift */; };
 		A8C1557923BDBAFC000B8093 /* AdminPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C1557823BDBAFC000B8093 /* AdminPanel.swift */; };
 		A8C62F4F23B6261D0098F892 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */; };
 		A8C62F5123B7C5CC0098F892 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8C62F5023B7C5CC0098F892 /* SF-Pro-Display-Light.otf */; };
 		A8E51DD5240EC4A00097F639 /* ChooseMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E51DD4240EC49F0097F639 /* ChooseMode.swift */; };
 		A8E51DD7240EC4C20097F639 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E51DD6240EC4C20097F639 /* Authorization.swift */; };
 		A8E51DD9240EC5400097F639 /* FirebaseErrorsProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E51DD8240EC53F0097F639 /* FirebaseErrorsProcessing.swift */; };
+		A8E51DDB241003350097F639 /* Theory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E51DDA241003350097F639 /* Theory.swift */; };
 		A8E5DF9B23BA5E4C00F67CCC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5DF9A23BA5E4C00F67CCC /* User.swift */; };
 		A8F1E60123D48B18004FCC41 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A8F1E60023D48B18004FCC41 /* .gitignore */; };
 /* End PBXBuildFile section */
@@ -61,14 +60,13 @@
 		A890506623AD3412004D8915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A890506823AD3412004D8915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8A9283223D732C1002D167F /* RadioButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtons.swift; sourceTree = "<group>"; };
-		A8A9283423D76E50002D167F /* TheoryText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryText.swift; sourceTree = "<group>"; };
-		A8B0414A23C2F4D20082E8BC /* WorkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkResult.swift; sourceTree = "<group>"; };
 		A8C1557823BDBAFC000B8093 /* AdminPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanel.swift; sourceTree = "<group>"; };
 		A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		A8C62F5023B7C5CC0098F892 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		A8E51DD4240EC49F0097F639 /* ChooseMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseMode.swift; sourceTree = "<group>"; };
 		A8E51DD6240EC4C20097F639 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		A8E51DD8240EC53F0097F639 /* FirebaseErrorsProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseErrorsProcessing.swift; sourceTree = "<group>"; };
+		A8E51DDA241003350097F639 /* Theory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theory.swift; sourceTree = "<group>"; };
 		A8E5DF9A23BA5E4C00F67CCC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A8F1E60023D48B18004FCC41 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		BB29B9964C24BD31C7693A4F /* Pods_Virtual_LAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Virtual_LAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +248,7 @@
 		A810DAFC23E3296C00F1E109 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A8E51DDA241003350097F639 /* Theory.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -257,7 +256,6 @@
 		A810DAFD23E3297300F1E109 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A8A9283423D76E50002D167F /* TheoryText.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -357,7 +355,6 @@
 		A810DB0E23E32B2600F1E109 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A8B0414A23C2F4D20082E8BC /* WorkResult.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -599,16 +596,15 @@
 				A810DB1323E5312700F1E109 /* CustomTableViewCell.swift in Sources */,
 				A8E51DD7240EC4C20097F639 /* Authorization.swift in Sources */,
 				A8204A3F23C89A0900FA70DF /* Test.swift in Sources */,
-				A8B0414B23C2F4D20082E8BC /* WorkResult.swift in Sources */,
 				A832E48123C6272C00DD26A3 /* Registration.swift in Sources */,
 				A8E5DF9B23BA5E4C00F67CCC /* User.swift in Sources */,
-				A8A9283523D76E50002D167F /* TheoryText.swift in Sources */,
 				A8C1557923BDBAFC000B8093 /* AdminPanel.swift in Sources */,
 				A890505B23AD340F004D8915 /* AppDelegate.swift in Sources */,
 				A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */,
 				A80F8B7E23AFDE5A000C36C3 /* ChooseTheme.swift in Sources */,
 				A8E51DD5240EC4A00097F639 /* ChooseMode.swift in Sources */,
 				A8123CD023C9E20100EBC986 /* PrepareForTest.swift in Sources */,
+				A8E51DDB241003350097F639 /* Theory.swift in Sources */,
 				A815B04923C61FC70087CB27 /* CompleteRegistration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,7 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = AQL4937GS7;
 				INFOPLIST_FILE = "Virtual LAB/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -776,7 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = AQL4937GS7;
 				INFOPLIST_FILE = "Virtual LAB/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

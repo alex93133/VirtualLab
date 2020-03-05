@@ -21,10 +21,11 @@ class RadioButtons {
         }
     }
     
+   
     // This func provides fade-in and fade-out when button did pressed
     static func changeCheckBox (_ sender: UIButton) {
         UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveLinear, animations: {
-            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            sender.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         }) { (success) in
             sender.isSelected = !sender.isSelected
             UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveLinear, animations: {

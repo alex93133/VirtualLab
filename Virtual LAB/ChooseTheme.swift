@@ -16,7 +16,10 @@ class ChooseTheme: UIViewController {
         headLabel.font            = UIFont(name: "Montserrat-ExtraBold", size: 36)
         self.view.backgroundColor = UIColor(named: "BackgroundColor")
         RadioButtons.taggingOfButtons(buttonsArray: nameOfThemeButtons)
+        nextButton.isEnabled = false
         nextButton.alpha = 0.3
+        Attributing.setButtonTextAligment(butttons: nameOfThemeButtons)
+        Attributing.disableMultiTouchForButton(buttonsArray: nameOfThemeButtons)
     }
     
     
@@ -25,7 +28,13 @@ class ChooseTheme: UIViewController {
     
     @IBAction func themeButtonPressed(_ sender: UIButton) {
         UIView.animate(withDuration: 0.2) {
+        if  sender.isSelected != true {
+            self.nextButton.isEnabled = true
             self.nextButton.alpha = 1
+            } else {
+            self.nextButton.isEnabled = false
+            self.nextButton.alpha = 0.3
+            }
         }
         
         let radioButtonInstance = RadioButtons(firstAnswerButton: nameOfThemeButtons[0],
