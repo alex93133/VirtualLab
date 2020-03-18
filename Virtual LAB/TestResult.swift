@@ -12,7 +12,6 @@ class TestResult: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(message)
         
         headLabel.font                 = UIFont(name: "Montserrat-ExtraBold", size: 36)
         congratulationLabel.font       = UIFont(name: "SFProDisplay-Light", size: 20)

@@ -45,7 +45,7 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 let firstName       = userDict?["firstName"] as! String
                 let secondName      = userDict?["secondName"] as! String
                 let groupNumber     = userDict?["groupNumber"] as! String
-                let test            = userDict?["test"] as? String ?? "Работа не начата"
+                let test            = userDict?["test"] as! String
                 let workDidFinished = userDict?["workDidFinished"] as? Bool ?? false
                 let user            = Users(firstName: firstName, secondName: secondName, email: email, groupNumber: groupNumber, test: test, workDidFinished: workDidFinished)
                 
@@ -67,15 +67,19 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
         switch index.selectedSegmentIndex {
         case 0:
             users.sort {$0.secondName < $1.secondName}
-            self.tableView.reloadData()
+            fadeReloadData()
             reverseButton.image = UIImage(named: "AZ")
         case 1:
             users.sort {$0.groupNumber < $1.groupNumber}
-            self.tableView.reloadData()
+            fadeReloadData()
             reverseButton.image = UIImage(named: "AZ")
         default:
             break
         }
+    }
+    
+    func fadeReloadData() {
+        UIView.transition(with: self.tableView, duration: 0.2, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
     }
     
     func updateReverseButtonImage() {

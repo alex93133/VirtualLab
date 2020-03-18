@@ -39,8 +39,6 @@ class Theory: UIViewController {
         theoryTextView.attributedText = attributedString
         theoryTextView.textColor = UIColor(named: "BlackTextColor")
         theoryTextView.sizeToFit()
-        theoryTextView.isEditable = false
-        theoryTextView.isUserInteractionEnabled = false
     }
     
 }

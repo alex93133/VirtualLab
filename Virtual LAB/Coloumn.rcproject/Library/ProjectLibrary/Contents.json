@@ -28,5 +28,45 @@
     "libraryIdentifier" : "a98382db195818d652f24f0728887523",
     "format" : "model",
     "displayName" : "коолонна маленькая разрез.usdz"
+  },
+  {
+    "libraryIdentifier" : "a6921e585df396eec22d6e668a7577a4",
+    "format" : "model",
+    "displayName" : "koolonna_malenkaya.usdz"
+  },
+  {
+    "libraryIdentifier" : "ba82192097d99070aa39568ecbdef85d",
+    "format" : "model",
+    "displayName" : "kolonochka.usdz"
+  },
+  {
+    "libraryIdentifier" : "0a68a45e2fda5a445c3f2593a66a21a9",
+    "format" : "model",
+    "displayName" : "doska_dlya_zametok.usdz"
+  },
+  {
+    "libraryIdentifier" : "e4dbc12b79a11675ef30fd72b71a7430",
+    "format" : "model",
+    "displayName" : "doska_dlya_zametok.usdz"
+  },
+  {
+    "libraryIdentifier" : "cadc9303a5af8293c6f38633f09b5ec4",
+    "format" : "image",
+    "displayName" : "3.jpeg"
+  },
+  {
+    "libraryIdentifier" : "d92edb1706137c05e4c4119cc352f9ea",
+    "format" : "image",
+    "displayName" : "4.jpeg"
+  },
+  {
+    "libraryIdentifier" : "10484fb8a35179b0a74906f56ad553cf",
+    "format" : "image",
+    "displayName" : "1.jpeg"
+  },
+  {
+    "libraryIdentifier" : "c3295935210c3b59d434a1fd6f6740d7",
+    "format" : "image",
+    "displayName" : "2.jpeg"
   }
 ]
