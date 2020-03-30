@@ -1,41 +1,23 @@
-
 import Foundation
 import Firebase
 
-
-struct UserData {
-    let email: String
-    let firstName: String
-    let secondName: String
-    let groupNumber: String
-//    let testResult: Int
+// MARK: - Users
+struct Users: Codable {
+    let firstName, secondName, email, groupNumber, test: String
+    let workDidFinished: Bool
 
     
     
-    init(email: String, firstName: String, secondName: String, groupNumber: String) {
-        self.email = email
-        self.firstName = firstName
-        self.secondName = secondName
-        self.groupNumber = groupNumber
-//        self.testResult = testResult
-
+func convertToDictionary() -> Any {
+    return ["email": email, "firstName": firstName, "secondName": secondName, "groupNumber": groupNumber, "test": test, "workDidFinished": workDidFinished]
+   }
+    
+   static func  extractionListOfGroup(arrayOfUsers: [Users]) -> [String] {
+    var groupArray = [String]()
+    for group in arrayOfUsers {
+        groupArray.append(group.groupNumber)
     }
-    
-
-    init(snapshot: DataSnapshot) {
-        let snapshotValue = snapshot.value as! [String: AnyObject]
-        email = snapshotValue["email"] as! String
-        firstName = snapshotValue["firstName"] as! String
-        secondName = snapshotValue["secondName"] as! String
-        groupNumber = snapshotValue["groupNumber"] as! String
-//        testResult = snapshotValue["testResult"] as! Int
-  
-    }
-    
-    
-    
-    func convertToDictionary() -> Any {
-        return ["email": email, "firstName": firstName, "secondName": secondName, "groupNumber": groupNumber]
+        return groupArray
     }
     
 }

@@ -64,6 +64,21 @@ class Attributing: UIViewController {
         }
     }
     
+   static func setButtonTextAligment(butttons: [UIButton]) {
+        for button in butttons {
+            button.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+            button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)
+            button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        }
+    }
+    
+    
+    static func disableMultiTouchForButton (buttonsArray : [UIButton]) {
+        for button in buttonsArray {
+         button.isExclusiveTouch = true
+        }
+    }
+    
 }
 
 
