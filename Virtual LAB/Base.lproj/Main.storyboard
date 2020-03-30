@@ -868,7 +868,7 @@
                         <viewLayoutGuide key="safeArea" id="jhl-Km-1jB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Сортировка" id="KIm-tv-ooW">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.left" catalog="system" id="o5W-Rd-yoa">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="o5W-Rd-yoa">
                             <connections>
                                 <action selector="logout:" destination="Jyt-uc-8yA" id="oel-mz-gVc"/>
                             </connections>
@@ -926,7 +926,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="Lbq-HI-CFK">
-                                        <barButtonItem key="leftBarButtonItem" image="square.and.arrow.up" catalog="system" id="jNk-9r-WEZ">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="jNk-9r-WEZ">
                                             <connections>
                                                 <action selector="logout:" destination="yik-9A-T4H" id="Txg-b5-1lF"/>
                                             </connections>
@@ -1525,9 +1525,8 @@
         <image name="Radio ON" width="28" height="30"/>
         <image name="Test" width="193" height="185"/>
         <image name="UnCheckbox" width="60" height="60"/>
-        <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="logo" width="169" height="169"/>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

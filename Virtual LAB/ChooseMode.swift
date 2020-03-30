@@ -14,8 +14,7 @@ class ChooseMode: UIViewController {
         Attributing.setNSAttributesForHeadLabel(label: headLabel)
         Attributing.setNSAttributesForHelloLabel(label: helloLabel)
         
-//        self.navigationController?.navigationBar.topItem?.title = ""
-        
+        self.navigationController?.navigationBar.topItem?.title = ""
         
         
         self.view.backgroundColor  = UIColor(named: "BackgroundColor")
