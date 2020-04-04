@@ -11,17 +11,7 @@ class RadioButtons {
         self.secondAnswerButton = secondAnswerButton
         self.thirdAnswerButton  = thirdAnswerButton
     }
-    
-    
-    static func taggingOfButtons (buttonsArray : [UIButton]) {
-        var tagForButton = 1
-        for button in buttonsArray {
-            button.tag = tagForButton
-            tagForButton += 1
-        }
-    }
-    
-   
+
     // This func provides fade-in and fade-out when button did pressed
     static func changeCheckBox (_ sender: UIButton) {
         UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveLinear, animations: {
@@ -35,7 +25,7 @@ class RadioButtons {
     }
     
     // This func is final RadioButton func for use
-    func answerButtonPressed(_ sender: UIButton) {
+    func applyEffect(_ sender: UIButton) {
         RadioButtons.changeCheckBox(sender)
         
         switch sender.tag {
@@ -53,5 +43,11 @@ class RadioButtons {
         
     }
     
-    
+    static func taggingOfButtons (buttonsArray : [UIButton]) {
+        var tagForButton = 1
+        for button in buttonsArray {
+            button.tag = tagForButton
+            tagForButton += 1
+        }
+    }
 }

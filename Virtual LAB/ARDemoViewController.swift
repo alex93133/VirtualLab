@@ -3,9 +3,7 @@ import RealityKit
 import Firebase
 
 
-
 class ARDemoViewController: UIViewController {
-    
     
     @IBOutlet weak var arView: ARView!
     @IBOutlet weak var endButton: UIButton!
@@ -14,27 +12,24 @@ class ARDemoViewController: UIViewController {
     var anchor: Coloumn.Scene1!
     var ref: DatabaseReference!
     
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ref = Database.database().reference()
         
         loadScene()
-        
+        setupView()
+    }
+    
+    private func setupView() {
         anchor.actions.workDidFinished.onAction = closeScene(_:)
         anchor.actions.sceneStarted.onAction    = setupPlate(_:)
         anchor.actions.changeTitle.onAction     = setupTop(_:)
-        
-        
         self.navigationController?.navigationBar.topItem?.title = ""
-         self.navigationItem.title = "Перемещайте устройство"
-        
+        self.navigationItem.title = "Перемещайте устройство"
         endButton.isHidden = true
     }
-    
-    
-    //MARK: Actions
     
     func loadScene() {
         anchor = try! Coloumn.loadScene1()
@@ -55,14 +50,22 @@ class ARDemoViewController: UIViewController {
         userInfoRef.updateChildValues(["workDidFinished": true])
     }
     
-    
     func finishWork() {
         updateDataBase()
         endButton.setTitle("Завершить", for: .normal)
         endButton.isHidden = false
          self.navigationItem.title = "Нажмите \"Завершить\""
     }
+   
     
+    @IBAction func endScene(_ sender: UIButton) {
+        performSegue(withIdentifier: "return", sender: nil)
+    }
+    
+}
+
+
+extension ARDemoViewController {
     func setupPlate(_ entity: Entity?) {
               self.navigationItem.title = "Установите тарелки"
     }
@@ -75,14 +78,4 @@ class ARDemoViewController: UIViewController {
         guard entity != nil else { return }
         finishWork()
     }
-    
-    @IBAction func endScene(_ sender: UIButton) {
-        performSegue(withIdentifier: "return", sender: nil)
-    }
-    
-    
-    @IBAction func reloadButtonPressed(_ sender: UIBarButtonItem) {
-        reloadScene()
-    }
-    
 }

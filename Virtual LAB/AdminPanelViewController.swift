@@ -6,7 +6,6 @@ import SkeletonView
 class AdminPanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var sortingSegmentedControl: UISegmentedControl!
     @IBOutlet weak var reverseButton: UIBarButtonItem!
     
@@ -19,15 +18,8 @@ class AdminPanelViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.tableFooterView    = UIView()
-        self.tableView.estimatedRowHeight = 90
-        
-        reverseButton.image = UIImage(named: "AZ")
+        setupView()
     }
-    
-    
-    //MARK: Read Data from Firebase
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -62,25 +54,29 @@ class AdminPanelViewController: UIViewController, UITableViewDelegate, UITableVi
         self.ref.removeAllObservers()
     }
     
+    private func setupView() {
+        self.tableView.tableFooterView    = UIView()
+        self.tableView.estimatedRowHeight = 90
+        reverseButton.image               = UIImage(named: "AZ")
+    }
     
-    func sortData (_ index: UISegmentedControl) {
+    
+    private func sortData (_ index: UISegmentedControl) {
         switch index.selectedSegmentIndex {
         case 0:
             users.sort {$0.secondName < $1.secondName}
-            fadeReloadData()
+            Design.fadeReloadData(tableView)
             reverseButton.image = UIImage(named: "AZ")
         case 1:
             users.sort {$0.groupNumber < $1.groupNumber}
-            fadeReloadData()
+            Design.fadeReloadData(tableView)
             reverseButton.image = UIImage(named: "AZ")
         default:
             break
         }
     }
     
-    func fadeReloadData() {
-        UIView.transition(with: self.tableView, duration: 0.2, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
-    }
+    
     
     func updateReverseButtonImage() {
         if self.reverseButton.image == UIImage(named: "AZ") {
@@ -99,7 +95,7 @@ class AdminPanelViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! StudentCustomTableViewCell
         
         let user = users[indexPath.row]
         

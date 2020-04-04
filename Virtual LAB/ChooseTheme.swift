@@ -1,7 +1,7 @@
 import UIKit
 import Firebase
 
-class ChooseTheme: UIViewController {
+class ChooseThemeViewController: UIViewController {
     
     @IBOutlet weak var headLabel: UILabel!
     

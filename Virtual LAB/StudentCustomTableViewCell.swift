@@ -1,6 +1,6 @@
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class StudentCustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var secondNameLabel: UILabel!
     @IBOutlet weak var firstNameLabel: UILabel!
@@ -16,6 +16,4 @@ class CustomTableViewCell: UITableViewCell {
             workResultLabel.isSelected = false
         }
     }
-    
-    
 }
