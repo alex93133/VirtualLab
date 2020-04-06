@@ -11,27 +11,25 @@ class TestViewController: UIViewController {
     @IBOutlet weak var thirdAnswerButton: UIButton!
     @IBOutlet var answersButton: [UIButton]!
     @IBOutlet weak var nextButton: UIButton!
+  
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupView()
-        updateQuestion()
-        ref = Database.database().reference()
-    }
-    
-    
-    let questionsList = FirstWork.questionsList
-    let answersList   = FirstWork.answersList
-    let rightAnswers  = FirstWork.rightAnswers
-    
+    var ref: DatabaseReference!
+    var questionsList:[String]!
+    var answersList:[String]!
+    var rightAnswers:[Int]!
     var currentQuestion   = 0
     var totalRightAnswers = 0
     var resultMessage     = ""
     
-    var ref: DatabaseReference!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getData()
+        setupView()
+        updateQuestion()
+        ref = FirebaseManager.shared.ref
+    }
+   
     private func setupView() {
         headLabel.font                      = UIFont(name: Fonts.mBold, size: 36)
         questionLabel.font                  = UIFont(name: Fonts.sFLight, size: 20)
@@ -39,13 +37,21 @@ class TestViewController: UIViewController {
         secondAnswerButton.titleLabel?.font = UIFont(name: Fonts.sFRegular, size: 17)
         thirdAnswerButton.titleLabel?.font  = UIFont(name: Fonts.sFRegular, size: 17)
         RadioButtons.taggingOfButtons(buttonsArray: answersButton)
-        Design.setButtonTextAligment(butttons: answersButton)
+        Design.setButtonTextAlignment(buttons: answersButton)
         Design.disableMultiTouchForButton(buttonsArray: answersButton)
     }
     
+    private func getData() {
+        ThemeManager.shared.getData { (data) in
+            questionsList = data.questionsList
+            answersList   = data.answersList
+            rightAnswers  = data.rightAnswers
+        }
+    }
+    
     private func updateQuestion() {
-        headLabel.text                      = "Вопрос \(currentQuestion + 1) из \(questionsList.count)"
-        questionLabel.text                  = questionsList[currentQuestion]
+        headLabel.text     = "Вопрос \(currentQuestion + 1) из \(questionsList.count)"
+        questionLabel.text = questionsList[currentQuestion]
         firstAnswerButton.setTitle(answersList[3 * currentQuestion], for: .normal)
         secondAnswerButton.setTitle(answersList[3 * currentQuestion + 1], for: .normal)
         thirdAnswerButton.setTitle(answersList[3 * currentQuestion + 2], for: .normal)
@@ -61,9 +67,9 @@ class TestViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.result {
-            let navController = segue.destination as! UINavigationController
+            let navController    = segue.destination as! UINavigationController
             let detailController = navController.topViewController as! TestResultViewController
-            detailController.message = self.resultMessage
+            detailController.message = resultMessage
         }
     }
     
@@ -75,7 +81,6 @@ class TestViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         checkRightAnswer(buttonsArray: answersButton)
-        
         switch currentQuestion {
         case questionsList.count - 2:
             nextButton.setTitle("Завершить выполнение", for: .normal)
@@ -83,11 +88,9 @@ class TestViewController: UIViewController {
             updateQuestion()
         case questionsList.count - 1:
             self.resultMessage = "\(totalRightAnswers) из \(questionsList.count)"
-            print(resultMessage)
-            guard let userID = Auth.auth().currentUser?.uid else { return }
-            let userInfoRef = self.ref.child("Users").child(userID)
+            guard let userID = FirebaseManager.shared.getCurrentUserUid() else { return }
+            let userInfoRef = ref.child("Users").child(userID).child("works").child("work\(ThemeManager.shared.currentThemeID)")
             userInfoRef.updateChildValues(["test": resultMessage])
-            
             performSegue(withIdentifier: Segues.result, sender: nil)
         default:
             currentQuestion += 1

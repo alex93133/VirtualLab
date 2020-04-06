@@ -11,8 +11,8 @@ class FirebaseManager {
     
     var handle : AuthStateDidChangeListenerHandle!
     var ref: DatabaseReference = Database.database().reference()
-    let adminUid = ["Ecueo44ulOR9ORTLNfGGjhxBLwL2"]
-    let errorDictionary = ["The email address is badly formatted.":"Неверный формат данных", "There is no user record corresponding to this identifier. The user may have been deleted.":"Пользователь не зарегистрирован", "Network error (such as timeout, interrupted connection or unreachable host) has occurred.":"Проверьте подключение к интернету", "The password is invalid or the user does not have a password.":"Неверный пароль"]
+    let adminUID               = ["Ecueo44ulOR9ORTLNfGGjhxBLwL2"]
+    let errorDictionary        = ["The email address is badly formatted.":"Неверный формат данных", "There is no user record corresponding to this identifier. The user may have been deleted.":"Пользователь не зарегистрирован", "Network error (such as timeout, interrupted connection or unreachable host) has occurred.":"Проверьте подключение к интернету", "The password is invalid or the user does not have a password.":"Неверный пароль"]
     
     
     func forgotPassword(email: String, targetVC: UIViewController) {
@@ -25,7 +25,7 @@ class FirebaseManager {
                 } else {
                     resultMessage = "Мы отправили инструкцию по восстановлению пароля на адрес \n \(email)"
                 }
-                AlertControllerManager.presentAllert(title: "Восстановление пароля", message: resultMessage, targetVC: targetVC, handler: nil)
+                AlertControllerManager.presentAlert(title: "Восстановление пароля", message: resultMessage, targetVC: targetVC, handler: nil)
             }
         }
     }
@@ -51,15 +51,22 @@ class FirebaseManager {
     }
     
     func register(email: String, password: String, firstName: String, secondName: String, groupNumber: String, handler: @escaping (String?) -> () ) {
-        
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             guard error == nil || user != nil else {
                 handler(error?.localizedDescription)
                 return
             }
-              let userInfo    = Users(firstName: firstName, secondName: secondName, email: email, groupNumber: groupNumber, test: "Не выполнен", workDidFinished: false)
+            print(groupNumber)
+            let userInfo    = Users(firstName: firstName, secondName: secondName, email: email, groupNumber: groupNumber, works: nil)
+            print(userInfo.groupNumber)
             let userInfoRef = self.ref.child("Users").child((user?.user.uid)!)
-              userInfoRef.setValue(userInfo.convertToDictionary())
+            userInfoRef.setValue(userInfo.convertToDictionary())
+            let workInfo = [Work(id: 1), Work(id: 2)]
+            let work1InfoRef = self.ref.child("Users").child((user?.user.uid)!).child("works").child("work1")
+            work1InfoRef.setValue(workInfo[0].convertToDictionary())
+            let work2InfoRef = self.ref.child("Users").child((user?.user.uid)!).child("works").child("work2")
+            work2InfoRef.setValue(workInfo[1].convertToDictionary())
+            handler(nil)
         }
     }
     
@@ -69,6 +76,42 @@ class FirebaseManager {
             return user.uid
         }
         return nil
+    }
+    
+    func getUsers(handler: @escaping ([Users]) -> ()) {
+        var users = [Users]()
+        ref = Database.database().reference()
+        ref.child("Users").observe(.value, with: {(snapshot) in
+            for snap in snapshot.children {
+                let userSnap        = snap as! DataSnapshot
+                let userDict        = userSnap.value as? [String:AnyObject]
+                
+                let email           = userDict?["email"] as! String
+                let firstName       = userDict?["firstName"] as! String
+                let secondName      = userDict?["secondName"] as! String
+                let groupNumber     = userDict?["groupNumber"] as! String
+                
+                var works = [Work]()
+                for workNumber in 1...2 {
+                    let workDict = userDict?["works"]?["work\(workNumber)"] as! [String : Any]
+                    let id = workDict["id"] as! Int
+                    let test = workDict["test"] as! String
+                    let workDidFinished = workDict["workDidFinished"] as! Bool
+                    var work = Work(id: id)
+                    work.test = test
+                    work.workDidFinished = workDidFinished
+                    works.append(work)
+                }
+                
+                let user = Users(firstName: firstName,
+                                 secondName: secondName,
+                                 email: email,
+                                 groupNumber: groupNumber,
+                                 works: works)
+                users.append(user)
+            }
+            handler(users)
+        })
     }
     
     func addListener(handler: @escaping (String?) -> ()) {
@@ -82,3 +125,4 @@ class FirebaseManager {
         Auth.auth().removeStateDidChangeListener(handle)
     }
 }
+

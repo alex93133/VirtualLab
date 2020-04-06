@@ -2,15 +2,13 @@ import UIKit
 
 class TestResultViewController: UIViewController {
     
-    
     @IBOutlet weak var headLabel: UILabel!
     @IBOutlet weak var congratulationLabel: UILabel!
     @IBOutlet weak var numberOfRightAnswersLabel: UILabel!
     @IBOutlet weak var textRightAnswersLabel: UILabel!
     
     
-    var message: String!
-    
+    var message: String!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +23,15 @@ class TestResultViewController: UIViewController {
         numberOfRightAnswersLabel.text = message
     }
     
-    private func showCustomAlert() {
-        let allertMessage = "Лабораторная работа находится в раработке, предлагаем Вам пройти её демо версию"
-               AlertControllerManager.presentAllert(title: "Внимание!", message: allertMessage, closeButton: "Вперед!", targetVC: self) { _ in
-                   self.performSegue(withIdentifier: Segues.aRDemo, sender: nil)
-               }
-    }
-    
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-       showCustomAlert()
+        switch ThemeManager.shared.currentThemeID {
+        case 1:
+            performSegue(withIdentifier: Segues.aRWork1, sender: nil)
+        case 2:
+            performSegue(withIdentifier: Segues.aRWork2, sender: nil)
+        default:
+            return
+        }
     }
 }

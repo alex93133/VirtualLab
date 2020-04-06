@@ -22,6 +22,7 @@
 		A82AD0B423CD9EFC00507EEC /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82AD0B323CD9EFC00507EEC /* TestResultViewController.swift */; };
 		A832E48123C6272C00DD26A3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E48023C6272C00DD26A3 /* RegistrationViewController.swift */; };
 		A832E48323C6364F00DD26A3 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = A832E48223C6364F00DD26A3 /* Design.swift */; };
+		A8593F2324389EF30038E750 /* AdminPanelViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8593F2224389EF30038E750 /* AdminPanelViewControllerExtensions.swift */; };
 		A86B15CB23BA34530075E19A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A86B15CA23BA34530075E19A /* GoogleService-Info.plist */; };
 		A874FF9223C712DA00F66D6C /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A874FF9123C712DA00F66D6C /* SF-Pro-Display-Regular.otf */; };
 		A88B030A240E3AC20016AA01 /* Coloumn.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A88B0309240E3AC20016AA01 /* Coloumn.rcproject */; };
@@ -33,6 +34,9 @@
 		A8C1557923BDBAFC000B8093 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C1557823BDBAFC000B8093 /* AdminPanelViewController.swift */; };
 		A8C62F4F23B6261D0098F892 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */; };
 		A8C62F5123B7C5CC0098F892 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8C62F5023B7C5CC0098F892 /* SF-Pro-Display-Light.otf */; };
+		A8CDA3B82439EE5F006A9A59 /* ARHeatExchanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CDA3B72439EE5F006A9A59 /* ARHeatExchanger.swift */; };
+		A8CDA3BA2439EF50006A9A59 /* HeatExchanger.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A8CDA3B92439EF4F006A9A59 /* HeatExchanger.rcproject */; };
+		A8CDA3BC243A010E006A9A59 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CDA3BB243A010E006A9A59 /* ThemeManager.swift */; };
 		A8E51DD5240EC4A00097F639 /* ChooseModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E51DD4240EC49F0097F639 /* ChooseModeViewController.swift */; };
 		A8E51DD7240EC4C20097F639 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E51DD6240EC4C20097F639 /* AuthorizationViewController.swift */; };
 		A8E51DD9240EC5400097F639 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E51DD8240EC53F0097F639 /* FirebaseManager.swift */; };
@@ -58,6 +62,7 @@
 		A82AD0B323CD9EFC00507EEC /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
 		A832E48023C6272C00DD26A3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A832E48223C6364F00DD26A3 /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
+		A8593F2224389EF30038E750 /* AdminPanelViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A869058223E5D5670051D148 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A869058523E5D58F0051D148 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86B15CA23BA34530075E19A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -73,6 +78,9 @@
 		A8C1557823BDBAFC000B8093 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelViewController.swift; sourceTree = "<group>"; };
 		A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		A8C62F5023B7C5CC0098F892 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		A8CDA3B72439EE5F006A9A59 /* ARHeatExchanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARHeatExchanger.swift; sourceTree = "<group>"; };
+		A8CDA3B92439EF4F006A9A59 /* HeatExchanger.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = HeatExchanger.rcproject; sourceTree = "<group>"; };
+		A8CDA3BB243A010E006A9A59 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		A8E51DD4240EC49F0097F639 /* ChooseModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseModeViewController.swift; sourceTree = "<group>"; };
 		A8E51DD6240EC4C20097F639 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A8E51DD8240EC53F0097F639 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
@@ -119,6 +127,7 @@
 				A8E51DD6240EC4C20097F639 /* AuthorizationViewController.swift */,
 				A832E48023C6272C00DD26A3 /* RegistrationViewController.swift */,
 				A8C1557823BDBAFC000B8093 /* AdminPanelViewController.swift */,
+				A8593F2224389EF30038E750 /* AdminPanelViewControllerExtensions.swift */,
 			);
 			name = FirebaseData;
 			sourceTree = "<group>";
@@ -131,6 +140,7 @@
 				A8204A3E23C89A0900FA70DF /* TestViewController.swift */,
 				A82AD0B323CD9EFC00507EEC /* TestResultViewController.swift */,
 				A890505C23AD340F004D8915 /* ARDemoViewController.swift */,
+				A8CDA3B72439EE5F006A9A59 /* ARHeatExchanger.swift */,
 			);
 			name = Work;
 			sourceTree = "<group>";
@@ -173,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				A8E51DD8240EC53F0097F639 /* FirebaseManager.swift */,
+				A8CDA3BB243A010E006A9A59 /* ThemeManager.swift */,
 				A8A9283223D732C1002D167F /* RadioButtons.swift */,
 				A812745C2434AE1600114B12 /* Segues.swift */,
 				A812745E2434B3D600114B12 /* AlertController.swift */,
@@ -196,6 +207,7 @@
 				A890506323AD3412004D8915 /* Assets.xcassets */,
 				A8983A7F23B61F1F00324983 /* Fonts */,
 				A88B0309240E3AC20016AA01 /* Coloumn.rcproject */,
+				A8CDA3B92439EF4F006A9A59 /* HeatExchanger.rcproject */,
 				A890505A23AD340F004D8915 /* AppDelegate.swift */,
 				A81274662434C05200114B12 /* WorkSource.swift */,
 				A8F1E60023D48B18004FCC41 /* .gitignore */,
@@ -409,11 +421,15 @@
 				A81274632434B8B000114B12 /* Fonts.swift in Sources */,
 				A8204A3F23C89A0900FA70DF /* TestViewController.swift in Sources */,
 				A832E48123C6272C00DD26A3 /* RegistrationViewController.swift in Sources */,
+				A8CDA3BC243A010E006A9A59 /* ThemeManager.swift in Sources */,
 				A8E5DF9B23BA5E4C00F67CCC /* UserModel.swift in Sources */,
 				A8C1557923BDBAFC000B8093 /* AdminPanelViewController.swift in Sources */,
 				A812745B2434AD4F00114B12 /* TextField.swift in Sources */,
+				A8CDA3B82439EE5F006A9A59 /* ARHeatExchanger.swift in Sources */,
 				A890505B23AD340F004D8915 /* AppDelegate.swift in Sources */,
 				A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */,
+				A8CDA3BA2439EF50006A9A59 /* HeatExchanger.rcproject in Sources */,
+				A8593F2324389EF30038E750 /* AdminPanelViewControllerExtensions.swift in Sources */,
 				A80F8B7E23AFDE5A000C36C3 /* ChooseThemeViewController.swift in Sources */,
 				A8E51DD5240EC4A00097F639 /* ChooseModeViewController.swift in Sources */,
 				A8123CD023C9E20100EBC986 /* PrepareForTestViewController.swift in Sources */,

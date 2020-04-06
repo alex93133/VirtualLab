@@ -10,7 +10,6 @@ class ChooseThemeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
     }
     
@@ -19,7 +18,7 @@ class ChooseThemeViewController: UIViewController {
         nextButton.isEnabled = false
         nextButton.alpha     = 0.3
         RadioButtons.taggingOfButtons(buttonsArray: nameOfThemeButtons)
-        Design.setButtonTextAligment(butttons: nameOfThemeButtons)
+        Design.setButtonTextAlignment(buttons: nameOfThemeButtons)
         Design.disableMultiTouchForButton(buttonsArray: nameOfThemeButtons)
     }
     
@@ -49,11 +48,12 @@ class ChooseThemeViewController: UIViewController {
         
         for button in nameOfThemeButtons {
             if button.isSelected == true {
-                switch button.tag {
-                case 1:
+                ThemeManager.shared.currentThemeID = button.tag
+               switch button.tag {
+                case 1, 2:
                     performSegue(withIdentifier: Segues.reading, sender: nil)
-                case 2, 3:
-                    AlertControllerManager.presentAllert(title: "Внимание!", message: "Даннный раздел находится в разработке", targetVC: self, handler: nil)
+                case 3:
+                     AlertControllerManager.presentAlert(title: "Внимание!", message: "Даннный раздел находится в разработке", targetVC: self, handler: nil)
                 default:
                     print("Something is going wrong")
                 }

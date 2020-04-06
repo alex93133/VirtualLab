@@ -51,7 +51,7 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func segueChoosing(uid: String) {
-        if FirebaseManager.shared.adminUid.contains(uid) {
+        if FirebaseManager.shared.adminUID.contains(uid) {
             performSegue(withIdentifier: Segues.admin, sender: nil)
         } else {
             performSegue(withIdentifier: Segues.chooseTheme, sender: nil)
@@ -63,14 +63,12 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
         displayWarningLabel(withText: "")
         guard let email  = emailTextField.text, email != "" else {
             displayWarningLabel(withText: "Поля не должны быть пустыми"); return }
-        
         FirebaseManager.shared.forgotPassword(email: email, targetVC: self)
     }
     
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
         displayWarningLabel(withText: "")
-        
         guard let email  = emailTextField.text,
             let password = passwordTextField.text,
             email    != "",
@@ -79,7 +77,6 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
                 displayWarningLabel(withText: "Поля не должны быть пустыми")
                 return
         }
-        
         FirebaseManager.shared.signIn(email: email, password: password, targetVC: self) { [weak self] (error) in
             self?.displayWarningLabel(withText: error!)
         }

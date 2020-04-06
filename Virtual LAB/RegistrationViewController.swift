@@ -14,7 +14,6 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupView()
     }
     
@@ -42,8 +41,6 @@ class RegistrationViewController: UIViewController {
             textField.text = ""
             textField.isSecureTextEntry = false
         }
-        
-        
     }
     
     private func  displayWarningLabel(withText: String) {
@@ -112,9 +109,12 @@ class RegistrationViewController: UIViewController {
                                                 if let error = error {
                                                     self?.displayWarningLabel(withText: error)
                                                     return
+                                                } else {
+                                                    DispatchQueue.main.async {
+                                                        self?.performSegue(withIdentifier: Segues.chooseThemeFromReg, sender: nil)
+                                                    }
                                                 }
             }
-            performSegue(withIdentifier: Segues.chooseThemeFromReg, sender: nil)
         }
     }
 }

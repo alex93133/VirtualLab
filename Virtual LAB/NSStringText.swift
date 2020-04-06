@@ -32,27 +32,32 @@ class NSStringText {
         attributedStringParagraphStyle.alignment        = NSTextAlignment.left
         attributedStringParagraphStyle.lineSpacing      = 4.0
         attributedStringParagraphStyle.paragraphSpacing = 15.0
-
+        
         let attributedStringParagraphStyleOne              = NSMutableParagraphStyle()
         attributedStringParagraphStyleOne.alignment        = NSTextAlignment.left
         attributedStringParagraphStyleOne.lineSpacing      = 4.0
         attributedStringParagraphStyleOne.paragraphSpacing = 5.0
-
+        
         let attributedStringParagraphStyleTwo              = NSMutableParagraphStyle()
         attributedStringParagraphStyleTwo.alignment        = NSTextAlignment.left
         attributedStringParagraphStyleTwo.lineSpacing      = 4.0
         attributedStringParagraphStyleTwo.paragraphSpacing = 15.0
-
-        let attributedString = NSMutableAttributedString(string: FirstWork.theory)
-
+        
+        var theoryText = ""
+        ThemeManager.shared.getData { (data) in
+            theoryText = data.theory
+        }
+        
+        let attributedString = NSMutableAttributedString(string: theoryText)
+        
         attributedString.addAttribute(NSAttributedString.Key.font, value:UIFont(name: Fonts.mBold, size:17.0)!, range:NSMakeRange(0,14))
         attributedString.addAttribute(NSAttributedString.Key.font, value:UIFont(name: Fonts.sFRegular, size:17.0)!, range:NSMakeRange(14,4203))
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:attributedStringParagraphStyle, range:NSMakeRange(0,2696))
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:attributedStringParagraphStyleOne, range:NSMakeRange(2696,451))
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:attributedStringParagraphStyleTwo, range:NSMakeRange(3147,1070))
         attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value:UIColor.black, range:NSMakeRange(0,4217))
-            attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value:UIColor(named: "BackgroundColor")!, range:NSMakeRange(0,4217))
-
+        attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value:UIColor(named: "BackgroundColor")!, range:NSMakeRange(0,4217))
+        
         textView.attributedText = attributedString
         textView.textColor      = UIColor(named: "BlackTextColor")
         textView.sizeToFit()

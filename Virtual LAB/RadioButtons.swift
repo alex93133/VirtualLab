@@ -2,8 +2,8 @@ import UIKit
 
 class RadioButtons {
     
-    let firstAnswerButton:  UIButton!
-    let secondAnswerButton: UIButton!
+    let firstAnswerButton:  UIButton
+    let secondAnswerButton: UIButton
     let thirdAnswerButton:  UIButton
     
     init(firstAnswerButton: UIButton, secondAnswerButton: UIButton, thirdAnswerButton: UIButton) {
@@ -11,7 +11,7 @@ class RadioButtons {
         self.secondAnswerButton = secondAnswerButton
         self.thirdAnswerButton  = thirdAnswerButton
     }
-
+    
     // This func provides fade-in and fade-out when button did pressed
     static func changeCheckBox (_ sender: UIButton) {
         UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveLinear, animations: {
