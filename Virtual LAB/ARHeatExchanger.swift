@@ -31,7 +31,10 @@ class ARHeatExchanger: UIViewController {
     @IBAction func reloadButtonPressed(_ sender: Any) {
         reloadScene()
     }
+
+    @IBAction func endScene(_ sender: UIButton) {
+        FirebaseManager.shared.updateWorkInfo()
+        performSegue(withIdentifier: Segues.returnFrom2, sender: nil)
+    }
     
-
-
 }

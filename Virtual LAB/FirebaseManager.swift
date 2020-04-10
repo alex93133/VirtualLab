@@ -114,6 +114,12 @@ class FirebaseManager {
         })
     }
     
+    func updateWorkInfo() {
+        guard let userID = getCurrentUserUid() else { return }
+        let userInfoRef = ref.child("Users").child(userID).child("works").child("work\(ThemeManager.shared.currentThemeID)")
+        userInfoRef.updateChildValues(["workDidFinished": true])
+    }
+    
     func addListener(handler: @escaping (String?) -> ()) {
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             guard user != nil else { return }

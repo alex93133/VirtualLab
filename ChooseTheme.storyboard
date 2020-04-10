@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yik-9A-T4H">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Choose Theme View Controller-->
+        <scene sceneID="a6b-Xk-zzq">
+            <objects>
+                <viewController storyboardIdentifier="TheoryID" modalPresentationStyle="fullScreen" id="yik-9A-T4H" customClass="ChooseThemeViewController" customModule="Virtual_LAB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LYZ-fU-Xsu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбор темы" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vlf-jm-u78">
+                                <rect key="frame" x="99" y="104" width="216.5" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" name="GrayTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4E-xS-xRq">
+                                <rect key="frame" x="37" y="782" width="340" height="48"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.79215686269999996" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="v0G-g1-8d2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Далее">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="enterToRead:" destination="yik-9A-T4H" eventType="touchUpInside" id="XwU-N7-c5o"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyq-I4-Ovt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="Lbq-HI-CFK">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="jNk-9r-WEZ">
+                                            <connections>
+                                                <action selector="logout:" destination="yik-9A-T4H" id="Txg-b5-1lF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hRw-Wc-xdA">
+                                <rect key="frame" x="15" y="179" width="384" height="261"/>
+                                <subviews>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmF-or-QrH">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="85"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0xk-qy-N7Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="85"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                <state key="normal" image="Radio OFF">
+                                                    <string key="title">Устройство ректификационной 
+колонны</string>
+                                                    <color key="titleColor" name="BlackTextColor"/>
+                                                </state>
+                                                <state key="selected" image="Radio ON"/>
+                                                <connections>
+                                                    <action selector="themeButtonPressed:" destination="yik-9A-T4H" eventType="touchUpInside" id="cMf-S6-LCP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="FieldShapeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="0xk-qy-N7Z" secondAttribute="trailing" id="9Pw-NX-nxF"/>
+                                            <constraint firstItem="0xk-qy-N7Z" firstAttribute="top" secondItem="TmF-or-QrH" secondAttribute="top" id="Hti-k3-yPs"/>
+                                            <constraint firstAttribute="height" constant="85" id="Ihn-FB-PAo"/>
+                                            <constraint firstItem="0xk-qy-N7Z" firstAttribute="leading" secondItem="TmF-or-QrH" secondAttribute="leading" id="VLW-1m-r70"/>
+                                            <constraint firstAttribute="bottom" secondItem="0xk-qy-N7Z" secondAttribute="bottom" id="dCT-kQ-qD0"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVj-55-PmH">
+                                        <rect key="frame" x="0.0" y="105" width="384" height="68"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ENW-MN-5AM">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="68"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                <state key="normal" title="Определение коэффициента теплопередачи кожухотрубчатого теплообменника " image="Radio OFF">
+                                                    <color key="titleColor" name="BlackTextColor"/>
+                                                </state>
+                                                <state key="selected" image="Radio ON"/>
+                                                <connections>
+                                                    <action selector="themeButtonPressed:" destination="yik-9A-T4H" eventType="touchUpInside" id="EQd-8z-uUN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="FieldShapeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="JhL-Ff-ozv"/>
+                                            <constraint firstAttribute="trailing" secondItem="ENW-MN-5AM" secondAttribute="trailing" id="NV7-TS-czB"/>
+                                            <constraint firstItem="ENW-MN-5AM" firstAttribute="leading" secondItem="RVj-55-PmH" secondAttribute="leading" id="RWh-NY-WP7"/>
+                                            <constraint firstAttribute="bottom" secondItem="ENW-MN-5AM" secondAttribute="bottom" id="aG9-cU-ey4"/>
+                                            <constraint firstItem="ENW-MN-5AM" firstAttribute="top" secondItem="RVj-55-PmH" secondAttribute="top" id="svA-7O-zbN"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuB-2W-nHN">
+                                        <rect key="frame" x="0.0" y="193" width="384" height="68"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="P46-aC-bZZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="68"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                <state key="normal" title="Насосное оборудование" image="Radio OFF">
+                                                    <color key="titleColor" name="BlackTextColor"/>
+                                                </state>
+                                                <state key="selected" image="Radio ON"/>
+                                                <connections>
+                                                    <action selector="themeButtonPressed:" destination="yik-9A-T4H" eventType="touchUpInside" id="f2Q-Xk-qqS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="FieldShapeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="P46-aC-bZZ" secondAttribute="bottom" id="DIJ-ma-7D7"/>
+                                            <constraint firstAttribute="height" constant="68" id="OaE-DJ-j7A"/>
+                                            <constraint firstItem="P46-aC-bZZ" firstAttribute="top" secondItem="LuB-2W-nHN" secondAttribute="top" id="Vdv-50-ZB4"/>
+                                            <constraint firstAttribute="trailing" secondItem="P46-aC-bZZ" secondAttribute="trailing" id="c5O-wD-vOS"/>
+                                            <constraint firstItem="P46-aC-bZZ" firstAttribute="leading" secondItem="LuB-2W-nHN" secondAttribute="leading" id="gfb-VW-t7l"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k4E-xS-xRq" firstAttribute="centerX" secondItem="V48-VU-yLm" secondAttribute="centerX" id="4rx-Ck-sVG"/>
+                            <constraint firstItem="V48-VU-yLm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="k4E-xS-xRq" secondAttribute="trailing" constant="37" id="B2i-8I-dSh"/>
+                            <constraint firstItem="k4E-xS-xRq" firstAttribute="leading" secondItem="V48-VU-yLm" secondAttribute="leading" constant="37" id="MVk-KE-Ovo"/>
+                            <constraint firstItem="hRw-Wc-xdA" firstAttribute="leading" secondItem="V48-VU-yLm" secondAttribute="leading" constant="15" id="QZL-rl-DaZ"/>
+                            <constraint firstItem="eyq-I4-Ovt" firstAttribute="trailing" secondItem="V48-VU-yLm" secondAttribute="trailing" id="VGD-ny-AxF"/>
+                            <constraint firstItem="V48-VU-yLm" firstAttribute="bottom" secondItem="k4E-xS-xRq" secondAttribute="bottom" constant="32" id="VLg-Uh-Peh"/>
+                            <constraint firstItem="hRw-Wc-xdA" firstAttribute="centerX" secondItem="V48-VU-yLm" secondAttribute="centerX" id="XDJ-tS-0UL"/>
+                            <constraint firstItem="eyq-I4-Ovt" firstAttribute="leading" secondItem="V48-VU-yLm" secondAttribute="leading" id="Xwi-xg-UnO"/>
+                            <constraint firstItem="Vlf-jm-u78" firstAttribute="centerX" secondItem="V48-VU-yLm" secondAttribute="centerX" id="neC-9d-z6Q"/>
+                            <constraint firstItem="Vlf-jm-u78" firstAttribute="top" secondItem="V48-VU-yLm" secondAttribute="top" constant="60" id="oLO-6f-3sW"/>
+                            <constraint firstItem="eyq-I4-Ovt" firstAttribute="top" secondItem="V48-VU-yLm" secondAttribute="top" id="q9O-OS-aCm"/>
+                            <constraint firstItem="hRw-Wc-xdA" firstAttribute="top" secondItem="Vlf-jm-u78" secondAttribute="bottom" constant="32" id="xyq-z6-mnV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V48-VU-yLm"/>
+                    </view>
+                    <connections>
+                        <outlet property="headLabel" destination="Vlf-jm-u78" id="fIA-YF-1xN"/>
+                        <outlet property="nextButton" destination="k4E-xS-xRq" id="Pir-fZ-DNc"/>
+                        <outletCollection property="nameOfThemeButtons" destination="0xk-qy-N7Z" collectionClass="NSMutableArray" id="gs0-vX-JDo"/>
+                        <outletCollection property="nameOfThemeButtons" destination="ENW-MN-5AM" collectionClass="NSMutableArray" id="aQd-8L-tiQ"/>
+                        <outletCollection property="nameOfThemeButtons" destination="P46-aC-bZZ" collectionClass="NSMutableArray" id="xYs-5u-vAN"/>
+                        <segue destination="7Ne-gs-isf" kind="presentation" identifier="fromThemeChoosingToReading" modalPresentationStyle="fullScreen" id="90V-IG-GjW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RqX-xC-b7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="480.16304347826093"/>
+        </scene>
+        <!--Work-->
+        <scene sceneID="JZK-X6-eWI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Work" id="7Ne-gs-isf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFA-iH-5zh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1551" y="480"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Radio OFF" width="28" height="30"/>
+        <image name="Radio ON" width="28" height="30"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BlackTextColor">
+            <color red="0.1289999932050705" green="0.1289999932050705" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FieldShapeColor">
+            <color red="0.93699997663497925" green="0.93699997663497925" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrayTextColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

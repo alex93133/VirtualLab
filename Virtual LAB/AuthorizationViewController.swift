@@ -62,7 +62,9 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
     @IBAction func forgotPasswordPressed(_ sender: UIButton) {
         displayWarningLabel(withText: "")
         guard let email  = emailTextField.text, email != "" else {
-            displayWarningLabel(withText: "Поля не должны быть пустыми"); return }
+            displayWarningLabel(withText: "Поля не должны быть пустыми")
+            return
+        }
         FirebaseManager.shared.forgotPassword(email: email, targetVC: self)
     }
     
@@ -74,7 +76,8 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
             email    != "",
             password != ""
             else {
-                displayWarningLabel(withText: "Поля не должны быть пустыми")
+                let error = ErrorHandling.emptyFields
+                displayWarningLabel(withText: error.localizedDescription)
                 return
         }
         FirebaseManager.shared.signIn(email: email, password: password, targetVC: self) { [weak self] (error) in

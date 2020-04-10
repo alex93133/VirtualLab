@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jQT-ig-xpL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Heat Exchanger-->
+        <scene sceneID="S0C-6h-8CU">
+            <objects>
+                <viewController storyboardIdentifier="UIViewController-jQT-ig-xpL" id="jQT-ig-xpL" customClass="ARHeatExchanger" customModule="Virtual_LAB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XYq-Ga-fxH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ulz-i6-0zv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5V-ma-LqB">
+                                <rect key="frame" x="37" y="782" width="340" height="48"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.79215686269999996" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="uFG-Tg-wGo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Завершить">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="endScene:" destination="jQT-ig-xpL" eventType="touchUpInside" id="fVO-ug-yg5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nYf-2b-fJk" firstAttribute="trailing" secondItem="x5V-ma-LqB" secondAttribute="trailing" constant="37" id="DN0-Gp-Opy"/>
+                            <constraint firstItem="x5V-ma-LqB" firstAttribute="leading" secondItem="nYf-2b-fJk" secondAttribute="leading" constant="37" id="ITI-Oe-TSH"/>
+                            <constraint firstItem="nYf-2b-fJk" firstAttribute="bottom" secondItem="Ulz-i6-0zv" secondAttribute="bottom" constant="-34" id="MHb-OB-BY4"/>
+                            <constraint firstItem="nYf-2b-fJk" firstAttribute="trailing" secondItem="Ulz-i6-0zv" secondAttribute="trailing" id="bcu-1V-Fg1"/>
+                            <constraint firstItem="nYf-2b-fJk" firstAttribute="bottom" secondItem="x5V-ma-LqB" secondAttribute="bottom" constant="32" id="bz0-ow-ZSq"/>
+                            <constraint firstItem="Ulz-i6-0zv" firstAttribute="top" secondItem="nYf-2b-fJk" secondAttribute="top" id="hYI-Xm-jZQ"/>
+                            <constraint firstItem="Ulz-i6-0zv" firstAttribute="leading" secondItem="nYf-2b-fJk" secondAttribute="leading" id="rMT-n7-ek4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nYf-2b-fJk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fHT-PD-PdF">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.2.circlepath" catalog="system" id="Ycy-Wv-od6">
+                            <connections>
+                                <action selector="reloadButtonPressed:" destination="jQT-ig-xpL" id="Tei-J5-ZBc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="arView" destination="Ulz-i6-0zv" id="U5C-Yw-CSZ"/>
+                        <segue destination="zQm-vQ-XyZ" kind="presentation" identifier="returnFrom2" modalPresentationStyle="fullScreen" id="kf7-J5-RIy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKG-bO-kuJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8069.5652173913049" y="1250.8928571428571"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="70F-TX-5W2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="zQm-vQ-XyZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySg-eT-NBY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8615" y="1251"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.2.circlepath" catalog="system" width="128" height="101"/>
+    </resources>
+</document>

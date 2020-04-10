@@ -5,7 +5,7 @@ enum Segues {
     static let admin              = "fromAuthToAdminPanel"
     static let chooseTheme        = "fromAuthToChooseTheme"
     static let chooseThemeFromReg = "fromRegToChooseTheme"
-    static let reading            = "fromTheoryToReading"
+    static let reading            = "fromThemeChoosingToReading"
     static let result             = "toTestResult"
     static let aRWork1             = "fromTestResultToWorK1"
     static let aRWork2             = "fromTestResultToWorK2"

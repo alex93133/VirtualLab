@@ -41,6 +41,7 @@ class RegistrationViewController: UIViewController {
             textField.text = ""
             textField.isSecureTextEntry = false
         }
+        thirdTextField.autocapitalizationType = .allCharacters
     }
     
     private func  displayWarningLabel(withText: String) {
@@ -59,24 +60,24 @@ class RegistrationViewController: UIViewController {
         return true
     }
     
-    private func firstStageOfReg() {
+    private func firstStageOfReg() throws {
         guard let email  = firstTextField.text,
             let password = secondTextField.text,
             email    != "",
             password != ""
             else {
                 displayWarningLabel(withText: "Поля не должны быть пустыми")
-                return
+                throw ErrorHandling.emptyFields
         }
         guard password == thirdTextField.text else {
             displayWarningLabel(withText: "Пароли должны совпадать")
-            return
+            throw ErrorHandling.passwordAreNotSimilar
         }
         userInfo.email    = email
         userInfo.password = password
     }
     
-    private func secondStageOfReg() {
+    private func secondStageOfReg() throws {
         guard
             let firstName   = firstTextField.text,
             let secondName  = secondTextField.text,
@@ -85,8 +86,7 @@ class RegistrationViewController: UIViewController {
             firstName   != "",
             secondName  != ""
             else {
-                displayWarningLabel(withText: "Поля не должны быть пустыми")
-                return
+                throw ErrorHandling.emptyFields
         }
         userInfo.firstName   = firstName
         userInfo.secondName  = secondName
@@ -97,10 +97,20 @@ class RegistrationViewController: UIViewController {
     @IBAction func nextButton(_ sender: UIButton) {
         displayWarningLabel(withText: "")
         if nextButton.titleLabel?.text == "Далее" {
-            firstStageOfReg()
+            do {
+                try firstStageOfReg()
+            } catch let error {
+                displayWarningLabel(withText: error.localizedDescription)
+                return
+            }
             updateView()
         } else {
-            secondStageOfReg()
+            do {
+                try secondStageOfReg()
+            } catch let error {
+                displayWarningLabel(withText: error.localizedDescription)
+                return
+            }
             FirebaseManager.shared.register(email: userInfo.email,
                                             password: userInfo.password,
                                             firstName: userInfo.firstName,

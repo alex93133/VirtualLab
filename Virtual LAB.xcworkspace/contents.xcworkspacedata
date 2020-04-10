@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/alexandr/Documents/&#x41d;&#x430;&#x443;&#x447;&#x43a;&#x430;/Virtual LAB/Virtual LAB/TheoryText.swift">
-   </FileRef>
-   <FileRef
       location = "group:Virtual LAB.xcodeproj">
    </FileRef>
    <FileRef

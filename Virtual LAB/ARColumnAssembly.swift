@@ -1,17 +1,17 @@
 import UIKit
 import RealityKit
-import Firebase
 
 
 class ARColumnAssembly: UIViewController {
     
     @IBOutlet weak var arView: ARView!
+    @IBOutlet weak var reloadButton: UIBarButtonItem!
     @IBOutlet weak var endButton: UIButton!
     
     
-    var anchor: Column.Scene1!
+    var anchor: ColumnAssembly.Scene1!
+
  
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +29,7 @@ class ARColumnAssembly: UIViewController {
     }
     
     func loadScene() {
-        anchor = try! Column.loadScene1()
+        anchor = try! ColumnAssembly.loadScene1()
         anchor.generateCollisionShapes(recursive: true)
         arView.scene.addAnchor(anchor)
     }
@@ -37,22 +37,24 @@ class ARColumnAssembly: UIViewController {
     
     func reloadScene() {
         arView.scene.removeAnchor(anchor)
-//        loadScene()
+        loadScene()
         }
     
-    
-    
-    
     func finishWork() {
-        updateDataBase()
+        FirebaseManager.shared.updateWorkInfo()
         endButton.setTitle("Завершить", for: .normal)
         endButton.isHidden = false
         navigationItem.title = "Нажмите \"Завершить\""
     }
    
     
+    
+    @IBAction func reloadButtonPressed(_ sender: UIBarButtonItem) {
+        reloadScene()
+    }
+    
     @IBAction func endScene(_ sender: UIButton) {
-        performSegue(withIdentifier: "return", sender: nil)
+        performSegue(withIdentifier: Segues.returnFrom1, sender: nil)
     }
     
 }

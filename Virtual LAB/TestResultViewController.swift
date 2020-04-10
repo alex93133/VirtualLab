@@ -6,6 +6,7 @@ class TestResultViewController: UIViewController {
     @IBOutlet weak var congratulationLabel: UILabel!
     @IBOutlet weak var numberOfRightAnswersLabel: UILabel!
     @IBOutlet weak var textRightAnswersLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     var message: String!    
@@ -23,8 +24,13 @@ class TestResultViewController: UIViewController {
         numberOfRightAnswersLabel.text = message
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        activityIndicator.startAnimating()
+    }
+    
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
+        activityIndicator.startAnimating()
         switch ThemeManager.shared.currentThemeID {
         case 1:
             performSegue(withIdentifier: Segues.aRWork1, sender: nil)
