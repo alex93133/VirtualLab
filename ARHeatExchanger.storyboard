@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,7 @@
                             </arView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5V-ma-LqB">
                                 <rect key="frame" x="37" y="782" width="340" height="48"/>
-                                <color key="backgroundColor" red="0.40784313729999999" green="0.79215686269999996" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="Green"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="uFG-Tg-wGo"/>
                                 </constraints>
@@ -37,8 +38,21 @@
                                     <action selector="endScene:" destination="jQT-ig-xpL" eventType="touchUpInside" id="fVO-ug-yg5"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eej-jj-7x2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title=" " id="Qlx-88-38h">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.counterclockwise" catalog="system" id="lUb-cy-S28">
+                                            <connections>
+                                                <action selector="reloadButtonPressed:" destination="jQT-ig-xpL" id="RZR-N3-qL0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nYf-2b-fJk" firstAttribute="trailing" secondItem="x5V-ma-LqB" secondAttribute="trailing" constant="37" id="DN0-Gp-Opy"/>
                             <constraint firstItem="x5V-ma-LqB" firstAttribute="leading" secondItem="nYf-2b-fJk" secondAttribute="leading" constant="37" id="ITI-Oe-TSH"/>
@@ -77,5 +91,12 @@
     </scenes>
     <resources>
         <image name="arrow.2.circlepath" catalog="system" width="128" height="101"/>
+        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
+        <namedColor name="BackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Green">
+            <color red="0.40799999237060547" green="0.79199999570846558" blue="0.0040000001899898052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

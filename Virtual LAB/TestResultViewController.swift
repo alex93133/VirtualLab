@@ -11,6 +11,7 @@ class TestResultViewController: UIViewController {
     
     var message: String!    
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -31,13 +32,15 @@ class TestResultViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         activityIndicator.startAnimating()
-        switch ThemeManager.shared.currentThemeID {
-        case 1:
-            performSegue(withIdentifier: Segues.aRWork1, sender: nil)
-        case 2:
-            performSegue(withIdentifier: Segues.aRWork2, sender: nil)
-        default:
-            return
+        DispatchQueue.main.async {
+            switch ThemeManager.shared.currentThemeID {
+            case 1:
+                self.performSegue(withIdentifier: Segues.aRWork1, sender: nil)
+            case 2:
+                self.performSegue(withIdentifier: Segues.aRWork2, sender: nil)
+            default:
+                return
+            }
         }
     }
 }

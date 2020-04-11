@@ -21,6 +21,8 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkingForCurrentUser()
+        emailTextField.text    = ""
+        passwordTextField.text = ""
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -30,10 +32,6 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
     private func setupView() {
         headLabel.font      = UIFont(name: Fonts.mBold, size: 36)
         errorLabel.isHidden = true
-        
-        emailTextField.text    = ""
-        passwordTextField.text = ""
-        
         Design.setPlaceholderDescriptionFont(placeholderDescription)
         Design.setAttributeForTextFields(inputTextFields)
     }

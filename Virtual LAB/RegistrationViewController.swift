@@ -3,6 +3,7 @@ import Firebase
 
 class RegistrationViewController: UIViewController {
     
+    @IBOutlet weak var stageLabel: UILabel!
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextField: UITextField!
     @IBOutlet weak var thirdTextField: UITextField!
@@ -10,30 +11,34 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet var placeholderDescription: [UILabel]!
     @IBOutlet var inputTextFields: [UITextField]!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var nextButton: UIButton!
+    
+    
+    let secondStageNames = ["Имя", "Фамилия", "Номер группы"]
+    var userInfo = (email: "", password: "", firstName: "", secondName: "", groupNumber: "")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
-    
-    let secondStageNames = ["Имя", "Фамилия", "Номер группы"]
-    
-    var userInfo = (email: "", password: "", firstName: "", secondName: "", groupNumber: "")
+    override func viewWillDisappear(_ animated: Bool) {
+        activityIndicator.startAnimating()
+    }
     
     private func setupView() {
         errorLabel.isHidden = true
         headLabel.font = UIFont(name: Fonts.mBold, size: 36)
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: Design.setStageTitle("Этап 1 из 2"))
+        stageLabel.font = UIFont(name: Fonts.sFLight, size: 17)
         Design.setPlaceholderDescriptionFont(placeholderDescription)
         Design.setAttributeForTextFields(inputTextFields)
     }
     
     private func updateView() {
+        stageLabel.text = "Этап 2 из 2"
         nextButton.setTitle("Завершить", for: .normal)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: Design.setStageTitle("Этап 2 из 2"))
         for index in 0...2 {
             let label = placeholderDescription[index]
             label.text = secondStageNames[index]
@@ -41,7 +46,9 @@ class RegistrationViewController: UIViewController {
             textField.text = ""
             textField.isSecureTextEntry = false
         }
-        thirdTextField.autocapitalizationType = .allCharacters
+        firstTextField.autocapitalizationType  = .words
+        secondTextField.autocapitalizationType = .words
+        thirdTextField.autocapitalizationType  = .allCharacters
     }
     
     private func  displayWarningLabel(withText: String) {
@@ -64,30 +71,24 @@ class RegistrationViewController: UIViewController {
         guard let email  = firstTextField.text,
             let password = secondTextField.text,
             email    != "",
-            password != ""
-            else {
-                displayWarningLabel(withText: "Поля не должны быть пустыми")
-                throw ErrorHandling.emptyFields
-        }
-        guard password == thirdTextField.text else {
-            displayWarningLabel(withText: "Пароли должны совпадать")
-            throw ErrorHandling.passwordAreNotSimilar
-        }
+            password != "" else { throw ErrorHandling.emptyFields }
+        guard password == thirdTextField.text else { throw ErrorHandling.passwordAreNotSimilar }
+        guard email.isValidEmail else { throw ErrorHandling.invalidEmail }
+        guard password.count >= 6 else { throw ErrorHandling.shortPassword }
         userInfo.email    = email
         userInfo.password = password
     }
     
     private func secondStageOfReg() throws {
-        guard
-            let firstName   = firstTextField.text,
+        guard let firstName   = firstTextField.text,
             let secondName  = secondTextField.text,
             let groupNumber = thirdTextField.text,
             groupNumber != "",
             firstName   != "",
-            secondName  != ""
-            else {
-                throw ErrorHandling.emptyFields
-        }
+            secondName  != "" else { throw ErrorHandling.emptyFields }
+        guard firstName.isValidName,
+            secondName.isValidName,
+            groupNumber.isValidName else { throw ErrorHandling.invalidType }
         userInfo.firstName   = firstName
         userInfo.secondName  = secondName
         userInfo.groupNumber = groupNumber
@@ -111,6 +112,7 @@ class RegistrationViewController: UIViewController {
                 displayWarningLabel(withText: error.localizedDescription)
                 return
             }
+            activityIndicator.startAnimating()
             FirebaseManager.shared.register(email: userInfo.email,
                                             password: userInfo.password,
                                             firstName: userInfo.firstName,

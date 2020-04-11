@@ -41,6 +41,8 @@
 		A890506723AD3412004D8915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A890506523AD3412004D8915 /* LaunchScreen.storyboard */; };
 		A899E59B24408AE900EE24D3 /* HeatExchangerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899E59A24408AE900EE24D3 /* HeatExchangerData.swift */; };
 		A899E59E24408B5400EE24D3 /* Workable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899E59D24408B5400EE24D3 /* Workable.swift */; };
+		A899E5A02440A74700EE24D3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899E59F2440A74700EE24D3 /* String.swift */; };
+		A899E5A22440CA7200EE24D3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A899E5A12440CA7200EE24D3 /* LaunchViewController.swift */; };
 		A8A9283323D732C1002D167F /* RadioButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9283223D732C1002D167F /* RadioButtons.swift */; };
 		A8C1557923BDBAFC000B8093 /* AdminPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C1557823BDBAFC000B8093 /* AdminPanelViewController.swift */; };
 		A8C62F4F23B6261D0098F892 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */; };
@@ -96,6 +98,8 @@
 		A890506823AD3412004D8915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A899E59A24408AE900EE24D3 /* HeatExchangerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatExchangerData.swift; sourceTree = "<group>"; };
 		A899E59D24408B5400EE24D3 /* Workable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workable.swift; sourceTree = "<group>"; };
+		A899E59F2440A74700EE24D3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		A899E5A12440CA7200EE24D3 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		A8A9283223D732C1002D167F /* RadioButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtons.swift; sourceTree = "<group>"; };
 		A8C1557823BDBAFC000B8093 /* AdminPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPanelViewController.swift; sourceTree = "<group>"; };
 		A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 		A807067B2434FCAB00F3CCA8 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				A899E5A12440CA7200EE24D3 /* LaunchViewController.swift */,
 				A8E51DD4240EC49F0097F639 /* ChooseModeViewController.swift */,
 				A80F8B7D23AFDE5A000C36C3 /* ChooseThemeViewController.swift */,
 			);
@@ -213,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				A812745A2434AD4F00114B12 /* TextFieldExtensions.swift */,
+				A899E59F2440A74700EE24D3 /* String.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -506,6 +512,7 @@
 				A832E48123C6272C00DD26A3 /* RegistrationViewController.swift in Sources */,
 				A8CDA3BC243A010E006A9A59 /* ThemeManager.swift in Sources */,
 				A8E5DF9B23BA5E4C00F67CCC /* UserModel.swift in Sources */,
+				A899E5A22440CA7200EE24D3 /* LaunchViewController.swift in Sources */,
 				A8C1557923BDBAFC000B8093 /* AdminPanelViewController.swift in Sources */,
 				A812745B2434AD4F00114B12 /* TextFieldExtensions.swift in Sources */,
 				A8CDA3B82439EE5F006A9A59 /* ARHeatExchanger.swift in Sources */,
@@ -517,6 +524,7 @@
 				A8E51DD5240EC4A00097F639 /* ChooseModeViewController.swift in Sources */,
 				A8123CD023C9E20100EBC986 /* PrepareForTestViewController.swift in Sources */,
 				A8E51DDB241003350097F639 /* TheoryViewController.swift in Sources */,
+				A899E5A02440A74700EE24D3 /* String.swift in Sources */,
 				A899E59E24408B5400EE24D3 /* Workable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,7 +687,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = AQL4937GS7;
 				INFOPLIST_FILE = "Virtual LAB/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -700,7 +708,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = AQL4937GS7;
 				INFOPLIST_FILE = "Virtual LAB/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

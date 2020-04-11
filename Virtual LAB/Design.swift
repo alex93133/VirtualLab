@@ -4,19 +4,15 @@ import SkeletonView
 
 class Design {
     
-    static let skeletonAnimation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .topLeftBottomRight)
-    
-    
-    //    Smooth reload data in TableView
-    static func fadeReloadData(_ tableView: UITableView) {
-        UIView.transition(with: tableView, duration: 0.2, options: .transitionCrossDissolve, animations: {tableView.reloadData()}, completion: nil)
+    static func navBarIsTransparent(transparent: Bool) {
+        let color = transparent ? UIColor.clear : UIColor(named: "BackgroundColor")!
+        UINavigationBar.appearance().backgroundColor = color
     }
     
-    static func setStageTitle (_ title : String) -> UILabel {
-        let label       = UILabel()
-        label.textColor = UIColor(red: 104/255, green: 202/255, blue: 1/255, alpha: 1)
-        label.text      = title
-        return label
+    static let skeletonAnimation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .topLeftBottomRight)
+    
+    static func smoothUpdateTableViewData(_ tableView: UITableView) {
+        UIView.transition(with: tableView, duration: 0.2, options: .transitionCrossDissolve, animations: {tableView.reloadData()}, completion: nil)
     }
     
     static func setPlaceholderDescriptionFont (_ arrayOfLabel : [UILabel]) {
@@ -34,7 +30,6 @@ class Design {
             textField.clipsToBounds      = true
             textField.setLeftPaddingPoints(16)
             textField.setRightPaddingPoints(16)
-            
         }
     }
     
@@ -51,5 +46,4 @@ class Design {
             button.isExclusiveTouch = true
         }
     }
-    
 }

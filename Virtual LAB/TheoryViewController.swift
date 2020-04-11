@@ -1,7 +1,7 @@
 import UIKit
 
+
 class TheoryViewController: UIViewController {
-    
     
     @IBOutlet weak var theoryTextView: UITextView!
     
@@ -12,7 +12,14 @@ class TheoryViewController: UIViewController {
     }
     
     private func setupView() {
-        NSStringText.setNSAttributesForTheory(textView: theoryTextView)
+        let theme = ThemeManager.shared.currentThemeID
+        switch theme {
+        case 1:
+            NSStringText.getNSForColumnAssembly(textView: theoryTextView)
+        case 2:
+            NSStringText.getNSForHeatExchanger(textView: theoryTextView)
+        default:
+            return
+        }
     }
-    
 }

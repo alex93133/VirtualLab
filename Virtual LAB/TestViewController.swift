@@ -9,9 +9,9 @@ class TestViewController: UIViewController {
     @IBOutlet weak var firstAnswerButton: UIButton!
     @IBOutlet weak var secondAnswerButton: UIButton!
     @IBOutlet weak var thirdAnswerButton: UIButton!
-    @IBOutlet var answersButton: [UIButton]!
+    @IBOutlet var answersButtons: [UIButton]!
     @IBOutlet weak var nextButton: UIButton!
-  
+    
     
     var ref: DatabaseReference!
     var questionsList:[String]!
@@ -29,16 +29,16 @@ class TestViewController: UIViewController {
         updateQuestion()
         ref = FirebaseManager.shared.ref
     }
-   
+    
     private func setupView() {
         headLabel.font                      = UIFont(name: Fonts.mBold, size: 36)
         questionLabel.font                  = UIFont(name: Fonts.sFLight, size: 20)
         firstAnswerButton.titleLabel?.font  = UIFont(name: Fonts.sFRegular, size: 17)
         secondAnswerButton.titleLabel?.font = UIFont(name: Fonts.sFRegular, size: 17)
         thirdAnswerButton.titleLabel?.font  = UIFont(name: Fonts.sFRegular, size: 17)
-        RadioButtons.taggingOfButtons(buttonsArray: answersButton)
-        Design.setButtonTextAlignment(buttons: answersButton)
-        Design.disableMultiTouchForButton(buttonsArray: answersButton)
+        RadioButtons.taggingOfButtons(buttonsArray: answersButtons)
+        Design.setButtonTextAlignment(buttons: answersButtons)
+        Design.disableMultiTouchForButton(buttonsArray: answersButtons)
     }
     
     private func getData() {
@@ -67,20 +67,19 @@ class TestViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.result {
-            let navController    = segue.destination as! UINavigationController
-            let detailController = navController.topViewController as! TestResultViewController
-            detailController.message = resultMessage
+            let dvc = segue.destination as! TestResultViewController
+            dvc.message = resultMessage
         }
     }
     
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        let radioButtonInstance = RadioButtons(firstAnswerButton: answersButton[0], secondAnswerButton: answersButton[1], thirdAnswerButton: answersButton[2])
+        let radioButtonInstance = RadioButtons(buttons: answersButtons)
         radioButtonInstance.applyEffect(sender)
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        checkRightAnswer(buttonsArray: answersButton)
+        checkRightAnswer(buttonsArray: answersButtons)
         switch currentQuestion {
         case questionsList.count - 2:
             nextButton.setTitle("Завершить выполнение", for: .normal)
@@ -89,15 +88,16 @@ class TestViewController: UIViewController {
         case questionsList.count - 1:
             self.resultMessage = "\(totalRightAnswers) из \(questionsList.count)"
             guard let userID = FirebaseManager.shared.getCurrentUserUid() else { return }
-            let userInfoRef = ref.child("Users").child(userID).child("works").child("work\(ThemeManager.shared.currentThemeID)")
-            userInfoRef.updateChildValues(["test": resultMessage])
+            let theme = ThemeManager.shared.currentThemeID
+            let userInfoRef = ref.child("Users").child(userID)
+            userInfoRef.updateChildValues(["work\(theme)Test": resultMessage])
             performSegue(withIdentifier: Segues.result, sender: nil)
         default:
             currentQuestion += 1
             updateQuestion()
         }
-        answersButton[0].isSelected = false
-        answersButton[1].isSelected = false
-        answersButton[2].isSelected = false
+        answersButtons[0].isSelected = false
+        answersButtons[1].isSelected = false
+        answersButtons[2].isSelected = false
     }
 }

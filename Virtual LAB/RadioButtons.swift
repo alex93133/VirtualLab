@@ -2,14 +2,11 @@ import UIKit
 
 class RadioButtons {
     
-    let firstAnswerButton:  UIButton
-    let secondAnswerButton: UIButton
-    let thirdAnswerButton:  UIButton
+    var buttons: [UIButton]
     
-    init(firstAnswerButton: UIButton, secondAnswerButton: UIButton, thirdAnswerButton: UIButton) {
-        self.firstAnswerButton  = firstAnswerButton
-        self.secondAnswerButton = secondAnswerButton
-        self.thirdAnswerButton  = thirdAnswerButton
+    
+    init(buttons: [UIButton]) {
+        self.buttons = buttons
     }
     
     // This func provides fade-in and fade-out when button did pressed
@@ -24,30 +21,20 @@ class RadioButtons {
         }
     }
     
-    // This func is final RadioButton func for use
-    func applyEffect(_ sender: UIButton) {
-        RadioButtons.changeCheckBox(sender)
-        
-        switch sender.tag {
-        case 1:
-            secondAnswerButton.isSelected = false
-            thirdAnswerButton.isSelected  = false
-        case 2:
-            firstAnswerButton.isSelected = false
-            thirdAnswerButton.isSelected = false
-        case 3:
-            firstAnswerButton.isSelected  = false
-            secondAnswerButton.isSelected = false
-        default: print(sender.tag)
-        }
-        
-    }
-    
     static func taggingOfButtons (buttonsArray : [UIButton]) {
         var tagForButton = 1
         for button in buttonsArray {
             button.tag = tagForButton
             tagForButton += 1
         }
+    }
+    
+    // This func is final RadioButton func for use
+    func applyEffect(_ sender: UIButton) {
+        let updatedButtons: [UIButton] = buttons.map() { $0.isSelected = false
+            return $0
+        }
+        buttons = updatedButtons
+        RadioButtons.changeCheckBox(sender)
     }
 }

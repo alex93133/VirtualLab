@@ -44,11 +44,11 @@ class AdminPanelViewController: UIViewController {
         switch index.selectedSegmentIndex {
         case 0:
             users.sort {$0.secondName < $1.secondName}
-            Design.fadeReloadData(tableView)
+            Design.smoothUpdateTableViewData(tableView)
             reverseButton.image = UIImage(named: "AZ")
         case 1:
             users.sort {$0.groupNumber < $1.groupNumber}
-            Design.fadeReloadData(tableView)
+            Design.smoothUpdateTableViewData(tableView)
             reverseButton.image = UIImage(named: "AZ")
         default:
             break
@@ -64,7 +64,6 @@ class AdminPanelViewController: UIViewController {
     }
     
     
-    //MARK: Actions
     @IBAction func sorting(_ sender: UISegmentedControl) {
         sortData(sender)
     }

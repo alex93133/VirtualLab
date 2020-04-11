@@ -5,14 +5,13 @@ import Firebase
 class FirebaseManager {
     
     static  let shared = FirebaseManager()
-    
-    private init() {}
-    
-    
     var handle : AuthStateDidChangeListenerHandle!
     var ref: DatabaseReference = Database.database().reference()
     let adminUID               = ["Ecueo44ulOR9ORTLNfGGjhxBLwL2"]
     let errorDictionary        = ["The email address is badly formatted.":"Неверный формат данных", "There is no user record corresponding to this identifier. The user may have been deleted.":"Пользователь не зарегистрирован", "Network error (such as timeout, interrupted connection or unreachable host) has occurred.":"Проверьте подключение к интернету", "The password is invalid or the user does not have a password.":"Неверный пароль"]
+    
+    
+    private init() {}
     
     
     func forgotPassword(email: String, targetVC: UIViewController) {
@@ -56,16 +55,16 @@ class FirebaseManager {
                 handler(error?.localizedDescription)
                 return
             }
-            print(groupNumber)
-            let userInfo    = Users(firstName: firstName, secondName: secondName, email: email, groupNumber: groupNumber, works: nil)
-            print(userInfo.groupNumber)
+            let userInfo    = Users(firstName: firstName,
+                                    secondName: secondName,
+                                    email: email,
+                                    groupNumber: groupNumber,
+                                    work1Test: "Не выполнен",
+                                    work2Test: "Не выполнен",
+                                    work1DidFinished: false,
+                                    work2DidFinished: false)
             let userInfoRef = self.ref.child("Users").child((user?.user.uid)!)
             userInfoRef.setValue(userInfo.convertToDictionary())
-            let workInfo = [Work(id: 1), Work(id: 2)]
-            let work1InfoRef = self.ref.child("Users").child((user?.user.uid)!).child("works").child("work1")
-            work1InfoRef.setValue(workInfo[0].convertToDictionary())
-            let work2InfoRef = self.ref.child("Users").child((user?.user.uid)!).child("works").child("work2")
-            work2InfoRef.setValue(workInfo[1].convertToDictionary())
             handler(nil)
         }
     }
@@ -86,28 +85,23 @@ class FirebaseManager {
                 let userSnap        = snap as! DataSnapshot
                 let userDict        = userSnap.value as? [String:AnyObject]
                 
-                let email           = userDict?["email"] as! String
-                let firstName       = userDict?["firstName"] as! String
-                let secondName      = userDict?["secondName"] as! String
-                let groupNumber     = userDict?["groupNumber"] as! String
-                
-                var works = [Work]()
-                for workNumber in 1...2 {
-                    let workDict = userDict?["works"]?["work\(workNumber)"] as! [String : Any]
-                    let id = workDict["id"] as! Int
-                    let test = workDict["test"] as! String
-                    let workDidFinished = workDict["workDidFinished"] as! Bool
-                    var work = Work(id: id)
-                    work.test = test
-                    work.workDidFinished = workDidFinished
-                    works.append(work)
-                }
+                let email                    = userDict?["email"] as! String
+                let firstName                = userDict?["firstName"] as! String
+                let secondName               = userDict?["secondName"] as! String
+                let groupNumber              = userDict?["groupNumber"] as! String
+                let work1Test               = userDict?["work1Test"] as! String
+                let work2Test            = userDict?["work2Test"] as! String
+                let work1DidFinished    = userDict?["work1DidFinished"] as! Bool
+                let work2DidFinished = userDict?["work2DidFinished"] as! Bool
                 
                 let user = Users(firstName: firstName,
                                  secondName: secondName,
                                  email: email,
                                  groupNumber: groupNumber,
-                                 works: works)
+                                 work1Test: work1Test,
+                                 work2Test: work2Test,
+                                 work1DidFinished: work1DidFinished,
+                                 work2DidFinished: work2DidFinished)
                 users.append(user)
             }
             handler(users)
@@ -116,8 +110,8 @@ class FirebaseManager {
     
     func updateWorkInfo() {
         guard let userID = getCurrentUserUid() else { return }
-        let userInfoRef = ref.child("Users").child(userID).child("works").child("work\(ThemeManager.shared.currentThemeID)")
-        userInfoRef.updateChildValues(["workDidFinished": true])
+        let userInfoRef = ref.child("Users").child(userID)
+        userInfoRef.updateChildValues(["work\(ThemeManager.shared.currentThemeID)DidFinished": true])
     }
     
     func addListener(handler: @escaping (String?) -> ()) {

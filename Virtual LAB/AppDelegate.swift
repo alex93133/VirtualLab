@@ -6,24 +6,25 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-  
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        UIBarButtonItem.appearance().tintColor = UIColor(red: 0.408, green: 0.792, blue: 0.004, alpha: 1)
         IQKeyboardManager.shared.enable = true
-     
-      FirebaseApp.configure()
         
-        // Sets background to a blank/empty image
+        FirebaseApp.configure()
+        
+        let image = UIImage(named: "back")
+        
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        // Sets shadow (line below the bar) to a blank image
         UINavigationBar.appearance().shadowImage = UIImage()
-        // Sets the translucent background color
-        UINavigationBar.appearance().backgroundColor = .clear
-        // Set translucent. (Default value is already true, so this can be removed if desired.)
         UINavigationBar.appearance().isTranslucent = true
-       
+        UINavigationBar.appearance().backIndicatorImage = image
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = image
+        
+        UIBarButtonItem.appearance().tintColor = UIColor(named: "Green")
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.clear], for: UIControl.State.highlighted)
         
         return true
     }

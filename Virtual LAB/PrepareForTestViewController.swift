@@ -22,6 +22,5 @@ class PrepareForTestViewController: UIViewController {
         headLabel.font            = UIFont(name: Fonts.mBold, size: 36)
         messageLabel.font         = UIFont(name: Fonts.sFLight, size: 20)
         messageLabel.text         = "\(totalNumberOfQuestion!) вопросов по теме"
-        self.navigationController?.navigationBar.topItem?.title = ""
     }
 }

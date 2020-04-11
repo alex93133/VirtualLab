@@ -37,26 +37,15 @@ class ChooseThemeViewController: UIViewController {
     
     @IBAction func themeButtonPressed(_ sender: UIButton) {
         showHideNextButton(sender)
-        
-        let radioButtons = RadioButtons(firstAnswerButton: nameOfThemeButtons[0],
-                                               secondAnswerButton: nameOfThemeButtons[1],
-                                               thirdAnswerButton: nameOfThemeButtons[2])
+        let radioButtons = RadioButtons(buttons: nameOfThemeButtons)
         radioButtons.applyEffect(sender)
     }
     
     @IBAction func enterToRead(_ sender: Any) {
-        
         for button in nameOfThemeButtons {
             if button.isSelected == true {
                 ThemeManager.shared.currentThemeID = button.tag
-               switch button.tag {
-                case 1, 2:
-                    performSegue(withIdentifier: Segues.reading, sender: nil)
-                case 3:
-                     AlertControllerManager.presentAlert(title: "Внимание!", message: "Даннный раздел находится в разработке", targetVC: self, handler: nil)
-                default:
-                    print("Something is going wrong")
-                }
+                performSegue(withIdentifier: Segues.reading, sender: nil)
             }
         }
     }

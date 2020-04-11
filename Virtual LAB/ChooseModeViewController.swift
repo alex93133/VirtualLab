@@ -11,10 +11,13 @@ class ChooseModeViewController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        Design.navBarIsTransparent(transparent: true)
+    }
+    
     private func setupView () {
         NSStringText.setNSAttributesForHeadLabel(label: headLabel)
         NSStringText.setNSAttributesForHelloLabel(label: helloLabel)
-        navigationController?.navigationBar.topItem?.title = ""
     }
 }
 

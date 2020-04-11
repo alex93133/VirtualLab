@@ -53,7 +53,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gy-in-0XG">
                                 <rect key="frame" x="37" y="782" width="340" height="48"/>
-                                <color key="backgroundColor" red="0.40784313729999999" green="0.79215686269999996" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="Green"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="N1G-OS-7yr"/>
                                 </constraints>
@@ -112,17 +112,35 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Этап 1 из 2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVU-J1-GMh">
+                                <rect key="frame" x="310" y="66" width="88" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AjG-OZ-y2T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="Green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Sds-sZ-A0v">
+                                <rect key="frame" x="188.5" y="705" width="37" height="37"/>
+                                <color key="color" name="Green"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wVU-J1-GMh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="D7D-Cx-Yok" secondAttribute="leading" constant="356" id="0Vy-L0-X3a"/>
                             <constraint firstItem="AWt-L5-KMx" firstAttribute="centerX" secondItem="D7D-Cx-Yok" secondAttribute="centerX" id="0Vz-QY-bmI"/>
                             <constraint firstItem="wdw-s1-pYI" firstAttribute="top" secondItem="D7D-Cx-Yok" secondAttribute="top" constant="22" id="2Dd-5w-W76"/>
+                            <constraint firstItem="D7D-Cx-Yok" firstAttribute="trailing" secondItem="wVU-J1-GMh" secondAttribute="trailing" constant="16" id="8Ar-05-rYI"/>
+                            <constraint firstItem="Sds-sZ-A0v" firstAttribute="centerX" secondItem="D7D-Cx-Yok" secondAttribute="centerX" id="8bP-Y6-yhs"/>
                             <constraint firstItem="Sxj-tp-QXb" firstAttribute="leading" secondItem="D7D-Cx-Yok" secondAttribute="leading" constant="15" id="Ahx-0s-O1B"/>
                             <constraint firstItem="Vco-11-u29" firstAttribute="centerX" secondItem="D7D-Cx-Yok" secondAttribute="centerX" id="FZO-k3-CEB"/>
                             <constraint firstItem="D7D-Cx-Yok" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3gy-in-0XG" secondAttribute="trailing" constant="37" id="GuS-v3-GUk"/>
                             <constraint firstItem="D7D-Cx-Yok" firstAttribute="trailing" secondItem="Sxj-tp-QXb" secondAttribute="trailing" constant="15" id="OG5-IJ-bMp"/>
                             <constraint firstItem="3gy-in-0XG" firstAttribute="leading" secondItem="D7D-Cx-Yok" secondAttribute="leading" constant="37" id="OcL-r2-lTe"/>
                             <constraint firstItem="rQg-lc-RPb" firstAttribute="leading" secondItem="jwb-Ub-rSV" secondAttribute="leading" constant="16" id="OeJ-0c-4hE"/>
+                            <constraint firstItem="3gy-in-0XG" firstAttribute="top" secondItem="Sds-sZ-A0v" secondAttribute="bottom" constant="40" id="Oia-6F-f7v"/>
+                            <constraint firstItem="wVU-J1-GMh" firstAttribute="top" secondItem="wdw-s1-pYI" secondAttribute="top" id="SBl-dL-yfu"/>
                             <constraint firstItem="szO-Ps-xQ2" firstAttribute="top" secondItem="AWt-L5-KMx" secondAttribute="bottom" constant="49" id="Uop-Oo-bzF"/>
                             <constraint firstItem="jwb-Ub-rSV" firstAttribute="top" secondItem="PmD-vo-JGm" secondAttribute="bottom" constant="4" id="b9c-g3-dgF"/>
                             <constraint firstItem="wdw-s1-pYI" firstAttribute="centerX" secondItem="D7D-Cx-Yok" secondAttribute="centerX" id="bes-yc-5hg"/>
@@ -136,11 +154,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="VCt-Mq-t8P"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Sds-sZ-A0v" id="aAv-kv-81S"/>
                         <outlet property="errorLabel" destination="Vco-11-u29" id="Ede-5H-GHf"/>
                         <outlet property="firstTextField" destination="Sxj-tp-QXb" id="5gF-Pq-BSo"/>
                         <outlet property="headLabel" destination="AWt-L5-KMx" id="Agk-v9-Fai"/>
                         <outlet property="nextButton" destination="3gy-in-0XG" id="xM5-v7-lGI"/>
                         <outlet property="secondTextField" destination="Zd0-P8-6fN" id="bka-OP-yDV"/>
+                        <outlet property="stageLabel" destination="wVU-J1-GMh" id="Zn0-kc-g4b"/>
                         <outlet property="thirdTextField" destination="jwb-Ub-rSV" id="qa1-If-fyo"/>
                         <outletCollection property="placeholderDescription" destination="ZhU-Mh-rMC" collectionClass="NSMutableArray" id="XeP-XK-vnV"/>
                         <outletCollection property="placeholderDescription" destination="kXO-ff-sae" collectionClass="NSMutableArray" id="6TL-bc-NpV"/>
@@ -177,6 +197,9 @@
         </namedColor>
         <namedColor name="GrayTextColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Green">
+            <color red="0.40799999237060547" green="0.79199999570846558" blue="0.0040000001899898052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

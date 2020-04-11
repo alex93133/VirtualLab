@@ -5,6 +5,8 @@ class ThemeManager {
     
     var currentThemeID = 0
     static var shared = ThemeManager()
+    
+    
     private init() {}
     
     

@@ -4,17 +4,17 @@ import RealityKit
 
 class ARColumnAssembly: UIViewController {
     
+    @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var arView: ARView!
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     @IBOutlet weak var endButton: UIButton!
     
     
     var anchor: ColumnAssembly.Scene1!
-
- 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadScene()
         setupView()
     }
@@ -23,30 +23,30 @@ class ARColumnAssembly: UIViewController {
         anchor.actions.workDidFinished.onAction = closeScene(_:)
         anchor.actions.sceneStarted.onAction    = setupPlate(_:)
         anchor.actions.changeTitle.onAction     = setupTop(_:)
-        navigationController?.navigationBar.topItem?.title = ""
-        navigationItem.title = "Перемещайте устройство"
+        navBar.title = "Перемещайте устройство"
         endButton.isHidden = true
+        Design.navBarIsTransparent(transparent: false)
     }
     
-    func loadScene() {
+    private func loadScene() {
         anchor = try! ColumnAssembly.loadScene1()
         anchor.generateCollisionShapes(recursive: true)
         arView.scene.addAnchor(anchor)
     }
     
     
-    func reloadScene() {
+    private func reloadScene() {
         arView.scene.removeAnchor(anchor)
         loadScene()
-        }
+    }
     
-    func finishWork() {
+    private func finishWork() {
         FirebaseManager.shared.updateWorkInfo()
         endButton.setTitle("Завершить", for: .normal)
         endButton.isHidden = false
-        navigationItem.title = "Нажмите \"Завершить\""
+        navBar.title = "Нажмите \"Завершить\""
     }
-   
+    
     
     
     @IBAction func reloadButtonPressed(_ sender: UIBarButtonItem) {
@@ -61,15 +61,15 @@ class ARColumnAssembly: UIViewController {
 
 
 extension ARColumnAssembly {
-    func setupPlate(_ entity: Entity?) {
-              navigationItem.title = "Установите тарелки"
+    private func setupPlate(_ entity: Entity?) {
+        navBar.title = "Установите тарелки"
     }
     
-    func setupTop(_ entity: Entity?) {
-                navigationItem.title = "Установите крышку"
+    private func setupTop(_ entity: Entity?) {
+        navBar.title = "Установите крышку"
     }
     
-    func closeScene(_ entity: Entity?) {
+    private func closeScene(_ entity: Entity?) {
         guard entity != nil else { return }
         finishWork()
     }

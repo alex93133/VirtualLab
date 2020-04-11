@@ -24,7 +24,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4E-xS-xRq">
                                 <rect key="frame" x="37" y="782" width="340" height="48"/>
-                                <color key="backgroundColor" red="0.40784313729999999" green="0.79215686269999996" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="Green"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="v0G-g1-8d2"/>
                                 </constraints>
@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="Lbq-HI-CFK">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="jNk-9r-WEZ">
+                                        <barButtonItem key="leftBarButtonItem" image="back" id="jNk-9r-WEZ">
                                             <connections>
                                                 <action selector="logout:" destination="yik-9A-T4H" id="Txg-b5-1lF"/>
                                             </connections>
@@ -54,7 +54,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hRw-Wc-xdA">
-                                <rect key="frame" x="15" y="179" width="384" height="261"/>
+                                <rect key="frame" x="15" y="179" width="384" height="190"/>
                                 <subviews>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmF-or-QrH">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="85"/>
@@ -88,10 +88,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVj-55-PmH">
-                                        <rect key="frame" x="0.0" y="105" width="384" height="68"/>
+                                        <rect key="frame" x="0.0" y="105" width="384" height="85"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ENW-MN-5AM">
-                                                <rect key="frame" x="0.0" y="0.0" width="384" height="68"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="85"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="85" id="j38-en-Ycd"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                 <state key="normal" title="Определение коэффициента теплопередачи кожухотрубчатого теплообменника " image="Radio OFF">
                                                     <color key="titleColor" name="BlackTextColor"/>
@@ -104,40 +107,10 @@
                                         </subviews>
                                         <color key="backgroundColor" name="FieldShapeColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="68" id="JhL-Ff-ozv"/>
                                             <constraint firstAttribute="trailing" secondItem="ENW-MN-5AM" secondAttribute="trailing" id="NV7-TS-czB"/>
                                             <constraint firstItem="ENW-MN-5AM" firstAttribute="leading" secondItem="RVj-55-PmH" secondAttribute="leading" id="RWh-NY-WP7"/>
                                             <constraint firstAttribute="bottom" secondItem="ENW-MN-5AM" secondAttribute="bottom" id="aG9-cU-ey4"/>
                                             <constraint firstItem="ENW-MN-5AM" firstAttribute="top" secondItem="RVj-55-PmH" secondAttribute="top" id="svA-7O-zbN"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuB-2W-nHN">
-                                        <rect key="frame" x="0.0" y="193" width="384" height="68"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="P46-aC-bZZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="384" height="68"/>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                                <state key="normal" title="Насосное оборудование" image="Radio OFF">
-                                                    <color key="titleColor" name="BlackTextColor"/>
-                                                </state>
-                                                <state key="selected" image="Radio ON"/>
-                                                <connections>
-                                                    <action selector="themeButtonPressed:" destination="yik-9A-T4H" eventType="touchUpInside" id="f2Q-Xk-qqS"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" name="FieldShapeColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="P46-aC-bZZ" secondAttribute="bottom" id="DIJ-ma-7D7"/>
-                                            <constraint firstAttribute="height" constant="68" id="OaE-DJ-j7A"/>
-                                            <constraint firstItem="P46-aC-bZZ" firstAttribute="top" secondItem="LuB-2W-nHN" secondAttribute="top" id="Vdv-50-ZB4"/>
-                                            <constraint firstAttribute="trailing" secondItem="P46-aC-bZZ" secondAttribute="trailing" id="c5O-wD-vOS"/>
-                                            <constraint firstItem="P46-aC-bZZ" firstAttribute="leading" secondItem="LuB-2W-nHN" secondAttribute="leading" id="gfb-VW-t7l"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -170,7 +143,6 @@
                         <outlet property="nextButton" destination="k4E-xS-xRq" id="Pir-fZ-DNc"/>
                         <outletCollection property="nameOfThemeButtons" destination="0xk-qy-N7Z" collectionClass="NSMutableArray" id="gs0-vX-JDo"/>
                         <outletCollection property="nameOfThemeButtons" destination="ENW-MN-5AM" collectionClass="NSMutableArray" id="aQd-8L-tiQ"/>
-                        <outletCollection property="nameOfThemeButtons" destination="P46-aC-bZZ" collectionClass="NSMutableArray" id="xYs-5u-vAN"/>
                         <segue destination="7Ne-gs-isf" kind="presentation" identifier="fromThemeChoosingToReading" modalPresentationStyle="fullScreen" id="90V-IG-GjW"/>
                     </connections>
                 </viewController>
@@ -190,7 +162,7 @@
     <resources>
         <image name="Radio OFF" width="28" height="30"/>
         <image name="Radio ON" width="28" height="30"/>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="back" width="12" height="20"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -202,6 +174,9 @@
         </namedColor>
         <namedColor name="GrayTextColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Green">
+            <color red="0.40799999237060547" green="0.79199999570846558" blue="0.0040000001899898052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
