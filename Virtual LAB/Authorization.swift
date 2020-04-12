@@ -1,7 +1,7 @@
 import UIKit
 import Firebase
 
-class Authorization: UIViewController, UITextFieldDelegate {
+class AuthorizationViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var headLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!

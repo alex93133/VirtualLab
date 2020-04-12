@@ -3,7 +3,7 @@ import Firebase
 import SkeletonView
 
 
-class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AdminPanelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -145,7 +145,7 @@ class AdminPanel: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //MARK: Extensions
 
 
-extension AdminPanel: SkeletonTableViewDataSource {
+extension AdminPanelViewController: SkeletonTableViewDataSource {
     public func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "Cell"
     }

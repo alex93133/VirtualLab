@@ -1,7 +1,7 @@
 import UIKit
 import Firebase
 
-class CompleteRegistration: UIViewController {
+class CompleteRegistrationViewController: UIViewController {
     
     
     @IBOutlet weak var firstNameTextField: UITextField!

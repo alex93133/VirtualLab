@@ -1,7 +1,7 @@
 import UIKit
 
 
-class ChooseMode: UIViewController {
+class ChooseModeViewController: UIViewController {
     
     @IBOutlet weak var headLabel: UILabel!
     @IBOutlet weak var helloLabel: UILabel!

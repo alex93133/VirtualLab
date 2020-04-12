@@ -1,7 +1,7 @@
 
 import UIKit
 
-class Theory: UIViewController {
+class TheoryViewController: UIViewController {
     
     
     @IBOutlet weak var theoryTextView: UITextView!

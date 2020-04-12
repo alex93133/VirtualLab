@@ -4,7 +4,7 @@ import Firebase
 
 
 
-class ARDemo: UIViewController {
+class ARDemoViewController: UIViewController {
     
     
     @IBOutlet weak var arView: ARView!
