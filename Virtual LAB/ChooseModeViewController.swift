@@ -4,7 +4,7 @@ import UIKit
 class ChooseModeViewController: UIViewController {
     
     @IBOutlet weak var headLabel: UILabel!
-    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var helloMessageLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -17,7 +17,7 @@ class ChooseModeViewController: UIViewController {
     
     private func setupView () {
         NSStringText.setNSAttributesForHeadLabel(label: headLabel)
-        NSStringText.setNSAttributesForHelloLabel(label: helloLabel)
+        NSStringText.setNSAttributesForHelloLabel(label: helloMessageLabel)
     }
 }
 

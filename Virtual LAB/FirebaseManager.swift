@@ -82,26 +82,24 @@ class FirebaseManager {
         ref = Database.database().reference()
         ref.child("Users").observe(.value, with: {(snapshot) in
             for snap in snapshot.children {
-                let userSnap        = snap as! DataSnapshot
-                let userDict        = userSnap.value as? [String:AnyObject]
-                
-                let email                    = userDict?["email"] as! String
-                let firstName                = userDict?["firstName"] as! String
-                let secondName               = userDict?["secondName"] as! String
-                let groupNumber              = userDict?["groupNumber"] as! String
-                let work1Test               = userDict?["work1Test"] as! String
-                let work2Test            = userDict?["work2Test"] as! String
-                let work1DidFinished    = userDict?["work1DidFinished"] as! Bool
+                let userSnap         = snap as! DataSnapshot
+                let userDict         = userSnap.value as? [String:AnyObject]
+                let email            = userDict?["email"] as! String
+                let firstName        = userDict?["firstName"] as! String
+                let secondName       = userDict?["secondName"] as! String
+                let groupNumber      = userDict?["groupNumber"] as! String
+                let work1Test        = userDict?["work1Test"] as! String
+                let work2Test        = userDict?["work2Test"] as! String
+                let work1DidFinished = userDict?["work1DidFinished"] as! Bool
                 let work2DidFinished = userDict?["work2DidFinished"] as! Bool
-                
-                let user = Users(firstName: firstName,
-                                 secondName: secondName,
-                                 email: email,
-                                 groupNumber: groupNumber,
-                                 work1Test: work1Test,
-                                 work2Test: work2Test,
-                                 work1DidFinished: work1DidFinished,
-                                 work2DidFinished: work2DidFinished)
+                let user             = Users(firstName: firstName,
+                                             secondName: secondName,
+                                             email: email,
+                                             groupNumber: groupNumber,
+                                             work1Test: work1Test,
+                                             work2Test: work2Test,
+                                             work1DidFinished: work1DidFinished,
+                                             work2DidFinished: work2DidFinished)
                 users.append(user)
             }
             handler(users)

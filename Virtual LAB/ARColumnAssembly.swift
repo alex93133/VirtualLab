@@ -48,7 +48,6 @@ class ARColumnAssembly: UIViewController {
     }
     
     
-    
     @IBAction func reloadButtonPressed(_ sender: UIBarButtonItem) {
         reloadScene()
     }
@@ -56,7 +55,6 @@ class ARColumnAssembly: UIViewController {
     @IBAction func endScene(_ sender: UIButton) {
         performSegue(withIdentifier: Segues.returnFrom1, sender: nil)
     }
-    
 }
 
 

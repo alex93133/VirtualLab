@@ -3,15 +3,15 @@ import Firebase
 
 class RegistrationViewController: UIViewController {
     
+    @IBOutlet weak var headLabel: UILabel!
     @IBOutlet weak var stageLabel: UILabel!
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextField: UITextField!
     @IBOutlet weak var thirdTextField: UITextField!
-    @IBOutlet weak var headLabel: UILabel!
-    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet var placeholderDescription: [UILabel]!
     @IBOutlet var inputTextFields: [UITextField]!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     
     

@@ -5,12 +5,12 @@ import Firebase
 class AuthorizationViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var headLabel: UILabel!
-    @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet var placeholderDescription: [UILabel]!
     @IBOutlet var inputTextFields: [UITextField]!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var signInButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -65,7 +65,6 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
         }
         FirebaseManager.shared.forgotPassword(email: email, targetVC: self)
     }
-    
     
     @IBAction func signInButtonPressed(_ sender: UIButton) {
         displayWarningLabel(withText: "")

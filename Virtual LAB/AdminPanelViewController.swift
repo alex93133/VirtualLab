@@ -51,7 +51,7 @@ class AdminPanelViewController: UIViewController {
             Design.smoothUpdateTableViewData(tableView)
             reverseButton.image = UIImage(named: "AZ")
         default:
-            break
+            return
         }
     }
     

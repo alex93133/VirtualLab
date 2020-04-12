@@ -3,8 +3,8 @@ import UIKit
 
 class StudentCustomTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var secondNameLabel: UILabel!
     @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var secondNameLabel: UILabel!
     @IBOutlet weak var groupNumberLabel: UILabel!
     @IBOutlet weak var columnTestLabel: UILabel!
     @IBOutlet weak var columnWorkDidFinished: UIButton!
