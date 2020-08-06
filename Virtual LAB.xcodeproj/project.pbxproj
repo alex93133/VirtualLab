@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		335458AA24DC31AE009A1964 /* ColumnAssemblyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335458A924DC31AE009A1964 /* ColumnAssemblyData.swift */; };
 		A80F8B7E23AFDE5A000C36C3 /* ChooseThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80F8B7D23AFDE5A000C36C3 /* ChooseThemeViewController.swift */; };
 		A810DB1323E5312700F1E109 /* StudentCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A810DB1223E5312600F1E109 /* StudentCustomTableViewCell.swift */; };
 		A8123CD023C9E20100EBC986 /* PrepareForTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8123CCF23C9E20100EBC986 /* PrepareForTestViewController.swift */; };
@@ -15,7 +16,6 @@
 		A812745F2434B3D600114B12 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A812745E2434B3D600114B12 /* AlertController.swift */; };
 		A81274612434B69E00114B12 /* NSStringText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81274602434B69E00114B12 /* NSStringText.swift */; };
 		A81274632434B8B000114B12 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81274622434B8B000114B12 /* Fonts.swift */; };
-		A81274672434C05200114B12 /* ColumnAssemblyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81274662434C05200114B12 /* ColumnAssemblyData.swift */; };
 		A8204A3F23C89A0900FA70DF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8204A3E23C89A0900FA70DF /* TestViewController.swift */; };
 		A828E0B623C831E3009739F2 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A828E0B523C831E2009739F2 /* Montserrat-Bold.ttf */; };
 		A82AD0B423CD9EFC00507EEC /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82AD0B323CD9EFC00507EEC /* TestResultViewController.swift */; };
@@ -59,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		335458A924DC31AE009A1964 /* ColumnAssemblyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnAssemblyData.swift; sourceTree = "<group>"; };
 		4D8D8C04968C895F391610E3 /* Pods_Virtual_LAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Virtual_LAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80F8B7D23AFDE5A000C36C3 /* ChooseThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseThemeViewController.swift; sourceTree = "<group>"; };
 		A810DB1223E5312600F1E109 /* StudentCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -68,18 +69,17 @@
 		A812745E2434B3D600114B12 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		A81274602434B69E00114B12 /* NSStringText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringText.swift; sourceTree = "<group>"; };
 		A81274622434B8B000114B12 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		A81274662434C05200114B12 /* ColumnAssemblyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColumnAssemblyData.swift; path = "/Users/alexandr/Documents/Научка/Virtual LAB/Virtual LAB/ColumnAssemblyData.swift"; sourceTree = "<absolute>"; };
 		A8204A3E23C89A0900FA70DF /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		A828E0B523C831E2009739F2 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		A82AD0B323CD9EFC00507EEC /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
 		A82D27C3243F683500916ABD /* ErrorHandlingExtesions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingExtesions.swift; sourceTree = "<group>"; };
 		A82D27C6243F6CB100916ABD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A82D27CB243F6DDA00916ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Registration.storyboard; sourceTree = "<group>"; };
-		A82D27CD243F706A00916ABD /* ChooseTheme.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChooseTheme.storyboard; sourceTree = SOURCE_ROOT; };
+		A82D27CD243F706A00916ABD /* ChooseTheme.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ChooseTheme.storyboard; path = "Virtual LAB/Storyboards/ChooseTheme.storyboard"; sourceTree = SOURCE_ROOT; };
 		A82D27D0243F781000916ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AdminPanel.storyboard; sourceTree = "<group>"; };
-		A82D27D2243F7AED00916ABD /* Work.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Work.storyboard; sourceTree = SOURCE_ROOT; };
+		A82D27D2243F7AED00916ABD /* Work.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Work.storyboard; path = "Virtual LAB/Storyboards/Work.storyboard"; sourceTree = SOURCE_ROOT; };
 		A82D27D5243F7B2200916ABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ARColumnAssembly.storyboard; sourceTree = "<group>"; };
-		A82D27D7243F7B3400916ABD /* ARHeatExchanger.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARHeatExchanger.storyboard; sourceTree = SOURCE_ROOT; };
+		A82D27D7243F7B3400916ABD /* ARHeatExchanger.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ARHeatExchanger.storyboard; path = "Virtual LAB/Storyboards/ARHeatExchanger.storyboard"; sourceTree = SOURCE_ROOT; };
 		A82D27D9243F7C5E00916ABD /* Result.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		A832E48023C6272C00DD26A3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A832E48223C6364F00DD26A3 /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		A8E51DD8240EC53F0097F639 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		A8E51DDA241003350097F639 /* TheoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryViewController.swift; sourceTree = "<group>"; };
 		A8E5DF9A23BA5E4C00F67CCC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		A8F1E60023D48B18004FCC41 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		A8F1E60023D48B18004FCC41 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = "Virtual LAB/Supporting files/.gitignore"; sourceTree = SOURCE_ROOT; };
 		BB29B9964C24BD31C7693A4F /* Pods_Virtual_LAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Virtual_LAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB87393DDA31F732DE032152 /* Pods-Virtual LAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Virtual LAB.release.xcconfig"; path = "Target Support Files/Pods-Virtual LAB/Pods-Virtual LAB.release.xcconfig"; sourceTree = "<group>"; };
 		C462EBEBA5A33A81302EB169 /* Pods-Virtual LAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Virtual LAB.debug.xcconfig"; path = "Target Support Files/Pods-Virtual LAB/Pods-Virtual LAB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,57 +138,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A807067B2434FCAB00F3CCA8 /* Navigation */ = {
+		335458AB24DC32C8009A1964 /* WorkSource */ = {
 			isa = PBXGroup;
 			children = (
-				A899E5A12440CA7200EE24D3 /* LaunchViewController.swift */,
-				A8E51DD4240EC49F0097F639 /* ChooseModeViewController.swift */,
-				A80F8B7D23AFDE5A000C36C3 /* ChooseThemeViewController.swift */,
+				335458A924DC31AE009A1964 /* ColumnAssemblyData.swift */,
+				A899E59A24408AE900EE24D3 /* HeatExchangerData.swift */,
 			);
-			name = Navigation;
+			path = WorkSource;
 			sourceTree = "<group>";
 		};
-		A807067C2434FCC800F3CCA8 /* FirebaseData */ = {
-			isa = PBXGroup;
-			children = (
-				A8E51DD6240EC4C20097F639 /* AuthorizationViewController.swift */,
-				A832E48023C6272C00DD26A3 /* RegistrationViewController.swift */,
-				A8C1557823BDBAFC000B8093 /* AdminPanelViewController.swift */,
-				A8593F2224389EF30038E750 /* AdminPanelViewControllerExtensions.swift */,
-			);
-			name = FirebaseData;
-			sourceTree = "<group>";
-		};
-		A807067D2434FD0600F3CCA8 /* Work */ = {
-			isa = PBXGroup;
-			children = (
-				A8E51DDA241003350097F639 /* TheoryViewController.swift */,
-				A8123CCF23C9E20100EBC986 /* PrepareForTestViewController.swift */,
-				A8204A3E23C89A0900FA70DF /* TestViewController.swift */,
-				A82AD0B323CD9EFC00507EEC /* TestResultViewController.swift */,
-				A890505C23AD340F004D8915 /* ARColumnAssembly.swift */,
-				A8CDA3B72439EE5F006A9A59 /* ARHeatExchanger.swift */,
-			);
-			name = Work;
-			sourceTree = "<group>";
-		};
-		A810DAFA23E3291300F1E109 /* Models */ = {
+		335458AD24DC32F1009A1964 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				A8E5DF9A23BA5E4C00F67CCC /* UserModel.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		A81AF83223F2778000B8427F /* Recovered References */ = {
+		335458AE24DC331C009A1964 /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				BB29B9964C24BD31C7693A4F /* Pods_Virtual_LAB.framework */,
+				A832E48223C6364F00DD26A3 /* Design.swift */,
+				A81274622434B8B000114B12 /* Fonts.swift */,
+				A81274602434B69E00114B12 /* NSStringText.swift */,
 			);
-			name = "Recovered References";
+			path = Design;
 			sourceTree = "<group>";
 		};
-		A82D27C5243F6BFC00916ABD /* Storyboards */ = {
+		335458AF24DC332B009A1964 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				335458AE24DC331C009A1964 /* Design */,
+				A810DB1223E5312600F1E109 /* StudentCustomTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		335458B024DC336E009A1964 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				A890506523AD3412004D8915 /* LaunchScreen.storyboard */,
@@ -201,58 +187,130 @@
 				A82D27D4243F7B2200916ABD /* ARColumnAssembly.storyboard */,
 				A82D27D7243F7B3400916ABD /* ARHeatExchanger.storyboard */,
 			);
-			name = Storyboards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		A87E76052434918300D977BD /* Screens */ = {
+		335458B224DC338C009A1964 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				A807067B2434FCAB00F3CCA8 /* Navigation */,
-				A807067C2434FCC800F3CCA8 /* FirebaseData */,
-				A807067D2434FD0600F3CCA8 /* Work */,
+				A899E5A12440CA7200EE24D3 /* LaunchViewController.swift */,
+				A8E51DD4240EC49F0097F639 /* ChooseModeViewController.swift */,
+				A80F8B7D23AFDE5A000C36C3 /* ChooseThemeViewController.swift */,
 			);
-			name = Screens;
+			path = Navigation;
 			sourceTree = "<group>";
 		};
-		A87E76072434933F00D977BD /* Extensions */ = {
+		335458B324DC339E009A1964 /* FirebaseData */ = {
 			isa = PBXGroup;
 			children = (
-				A812745A2434AD4F00114B12 /* TextFieldExtensions.swift */,
-				A899E59F2440A74700EE24D3 /* String.swift */,
+				A8E51DD6240EC4C20097F639 /* AuthorizationViewController.swift */,
+				A832E48023C6272C00DD26A3 /* RegistrationViewController.swift */,
+				A8C1557823BDBAFC000B8093 /* AdminPanelViewController.swift */,
+				A8593F2224389EF30038E750 /* AdminPanelViewControllerExtensions.swift */,
 			);
-			name = Extensions;
+			path = FirebaseData;
 			sourceTree = "<group>";
 		};
-		A87E76082434936A00D977BD /* Managers */ = {
+		335458B424DC33B6009A1964 /* Work */ = {
+			isa = PBXGroup;
+			children = (
+				A8E51DDA241003350097F639 /* TheoryViewController.swift */,
+				A8123CCF23C9E20100EBC986 /* PrepareForTestViewController.swift */,
+				A8204A3E23C89A0900FA70DF /* TestViewController.swift */,
+				A82AD0B323CD9EFC00507EEC /* TestResultViewController.swift */,
+				A890505C23AD340F004D8915 /* ARColumnAssembly.swift */,
+				A8CDA3B72439EE5F006A9A59 /* ARHeatExchanger.swift */,
+			);
+			path = Work;
+			sourceTree = "<group>";
+		};
+		335458B524DC33DA009A1964 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				335458B224DC338C009A1964 /* Navigation */,
+				335458B324DC339E009A1964 /* FirebaseData */,
+				335458B424DC33B6009A1964 /* Work */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		335458B624DC33EF009A1964 /* Composer */ = {
+			isa = PBXGroup;
+			children = (
+				A88B0309240E3AC20016AA01 /* ColumnAssembly.rcproject */,
+				A8CDA3B92439EF4F006A9A59 /* HeatExchanger.rcproject */,
+			);
+			path = Composer;
+			sourceTree = "<group>";
+		};
+		335458B724DC340A009A1964 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				A8E51DD8240EC53F0097F639 /* FirebaseManager.swift */,
 				A8CDA3BB243A010E006A9A59 /* ThemeManager.swift */,
 			);
-			name = Managers;
+			path = Managers;
 			sourceTree = "<group>";
 		};
-		A87E7609243493C200D977BD /* Design */ = {
+		335458B924DC3447009A1964 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				A832E48223C6364F00DD26A3 /* Design.swift */,
-				A81274622434B8B000114B12 /* Fonts.swift */,
-				A81274602434B69E00114B12 /* NSStringText.swift */,
+				A85C0A74243F4E5C0009142B /* ErrorHandling.swift */,
+				A82D27C3243F683500916ABD /* ErrorHandlingExtesions.swift */,
+				A812745E2434B3D600114B12 /* AlertController.swift */,
+				A8A9283223D732C1002D167F /* RadioButtons.swift */,
+				A812745C2434AE1600114B12 /* Segues.swift */,
 			);
-			name = Design;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
-		A889D58623BA28DE00E164B3 /* Supporting files */ = {
+		335458BA24DC3460009A1964 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A899E59D24408B5400EE24D3 /* Workable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		335458BB24DC3471009A1964 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A812745A2434AD4F00114B12 /* TextFieldExtensions.swift */,
+				A899E59F2440A74700EE24D3 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		335458BC24DC3482009A1964 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A874FF9123C712DA00F66D6C /* SF-Pro-Display-Regular.otf */,
+				A8C62F5023B7C5CC0098F892 /* SF-Pro-Display-Light.otf */,
+				A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */,
+				A828E0B523C831E2009739F2 /* Montserrat-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		335458BD24DC34C2009A1964 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
 				A890506323AD3412004D8915 /* Assets.xcassets */,
-				A8983A7F23B61F1F00324983 /* Fonts */,
+				335458BC24DC3482009A1964 /* Fonts */,
 				A890505A23AD340F004D8915 /* AppDelegate.swift */,
 				A8F1E60023D48B18004FCC41 /* .gitignore */,
 				A890506823AD3412004D8915 /* Info.plist */,
 				A86B15CA23BA34530075E19A /* GoogleService-Info.plist */,
 			);
-			name = "Supporting files";
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		A81AF83223F2778000B8427F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				BB29B9964C24BD31C7693A4F /* Pods_Virtual_LAB.framework */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		A890504E23AD340F004D8915 = {
@@ -277,77 +335,19 @@
 		A890505923AD340F004D8915 /* Virtual LAB */ = {
 			isa = PBXGroup;
 			children = (
-				A899E59824408A4600EE24D3 /* WorkSource */,
-				A810DAFA23E3291300F1E109 /* Models */,
-				A8E5DF9F23BA5E8100F67CCC /* Views */,
-				A82D27C5243F6BFC00916ABD /* Storyboards */,
-				A87E76052434918300D977BD /* Screens */,
-				A899E59724408A1F00EE24D3 /* Composer */,
-				A87E76082434936A00D977BD /* Managers */,
-				A899E59924408A7200EE24D3 /* Utilities */,
-				A899E59C24408B3300EE24D3 /* Protocols */,
-				A87E76072434933F00D977BD /* Extensions */,
-				A889D58623BA28DE00E164B3 /* Supporting files */,
+				335458AB24DC32C8009A1964 /* WorkSource */,
+				335458AD24DC32F1009A1964 /* Models */,
+				335458AF24DC332B009A1964 /* Views */,
+				335458B024DC336E009A1964 /* Storyboards */,
+				335458B524DC33DA009A1964 /* Screens */,
+				335458B624DC33EF009A1964 /* Composer */,
+				335458B724DC340A009A1964 /* Managers */,
+				335458B924DC3447009A1964 /* Utilities */,
+				335458BA24DC3460009A1964 /* Protocols */,
+				335458BB24DC3471009A1964 /* Extensions */,
+				335458BD24DC34C2009A1964 /* Supporting files */,
 			);
 			path = "Virtual LAB";
-			sourceTree = "<group>";
-		};
-		A8983A7F23B61F1F00324983 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				A874FF9123C712DA00F66D6C /* SF-Pro-Display-Regular.otf */,
-				A8C62F5023B7C5CC0098F892 /* SF-Pro-Display-Light.otf */,
-				A8C62F4E23B6261D0098F892 /* Montserrat-ExtraBold.ttf */,
-				A828E0B523C831E2009739F2 /* Montserrat-Bold.ttf */,
-			);
-			name = Fonts;
-			sourceTree = "<group>";
-		};
-		A899E59724408A1F00EE24D3 /* Composer */ = {
-			isa = PBXGroup;
-			children = (
-				A88B0309240E3AC20016AA01 /* ColumnAssembly.rcproject */,
-				A8CDA3B92439EF4F006A9A59 /* HeatExchanger.rcproject */,
-			);
-			name = Composer;
-			sourceTree = "<group>";
-		};
-		A899E59824408A4600EE24D3 /* WorkSource */ = {
-			isa = PBXGroup;
-			children = (
-				A81274662434C05200114B12 /* ColumnAssemblyData.swift */,
-				A899E59A24408AE900EE24D3 /* HeatExchangerData.swift */,
-			);
-			name = WorkSource;
-			sourceTree = "<group>";
-		};
-		A899E59924408A7200EE24D3 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				A85C0A74243F4E5C0009142B /* ErrorHandling.swift */,
-				A82D27C3243F683500916ABD /* ErrorHandlingExtesions.swift */,
-				A812745E2434B3D600114B12 /* AlertController.swift */,
-				A8A9283223D732C1002D167F /* RadioButtons.swift */,
-				A812745C2434AE1600114B12 /* Segues.swift */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
-		A899E59C24408B3300EE24D3 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				A899E59D24408B5400EE24D3 /* Workable.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
-		A8E5DF9F23BA5E8100F67CCC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A87E7609243493C200D977BD /* Design */,
-				A810DB1223E5312600F1E109 /* StudentCustomTableViewCell.swift */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		BE01E5ACB02B7B7F2DE349C4 /* Frameworks */ = {
@@ -494,9 +494,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A88B030A240E3AC20016AA01 /* ColumnAssembly.rcproject in Sources */,
+				335458AA24DC31AE009A1964 /* ColumnAssemblyData.swift in Sources */,
 				A890505D23AD340F004D8915 /* ARColumnAssembly.swift in Sources */,
 				A82AD0B423CD9EFC00507EEC /* TestResultViewController.swift in Sources */,
-				A81274672434C05200114B12 /* ColumnAssemblyData.swift in Sources */,
 				A832E48323C6364F00DD26A3 /* Design.swift in Sources */,
 				A82D27C4243F683500916ABD /* ErrorHandlingExtesions.swift in Sources */,
 				A85C0A75243F4E5C0009142B /* ErrorHandling.swift in Sources */,
@@ -689,7 +689,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = AQL4937GS7;
-				INFOPLIST_FILE = "Virtual LAB/Info.plist";
+				INFOPLIST_FILE = "Virtual LAB/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -710,7 +710,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = AQL4937GS7;
-				INFOPLIST_FILE = "Virtual LAB/Info.plist";
+				INFOPLIST_FILE = "Virtual LAB/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
